@@ -144,6 +144,7 @@ app.use(
 // Límite ampliado a 5mb para permitir subida y guardado persistente de fotos de perfil (Base64/DataURL)
 app.use(express.json({ limit: '5mb' }));
 app.use(express.urlencoded({ extended: true, limit: '5mb' }));
+app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'src')));
 
 // Sanitización de inputs contra ataques XSS (escapando <, >, ', ", &)

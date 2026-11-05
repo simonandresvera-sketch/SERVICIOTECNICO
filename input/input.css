@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
+@source "../*.html";
 @source "../src/**/*.{html,js}";
 
 @theme {

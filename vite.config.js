@@ -459,6 +459,5 @@ function seijakutechAuthPlugin() {
 }
 
 export default defineConfig({
-  root: 'src',
   plugins: [seijakutechAuthPlugin()]
 });
