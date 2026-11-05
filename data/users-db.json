@@ -1,0 +1,17 @@
+{
+  "users": {
+    "administrador": {
+      "id": 1,
+      "nombre": "Administrador SEIJAKUTECH",
+      "correo": "administrador",
+      "usuario": "administrador",
+      "password_hash": "$2b$10$hDNoal2JAeo672/6Hjuc..uroce78iAY2JB4slwLqNaDHUOVlv0RS",
+      "password_sha256": "f1188a9f16d66d624a9d1de8e2c4f14796c11e731e2843db3b9422298fd11c90",
+      "foto_perfil": null,
+      "bienvenida_enviada": true,
+      "fecha_bienvenida": "2026-11-05T04:42:43.050Z",
+      "rol": "administrador",
+      "fecha_registro": "2026-11-05T04:42:43.050Z"
+    }
+  }
+}

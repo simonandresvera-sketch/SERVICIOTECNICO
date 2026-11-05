@@ -1,0 +1,3176 @@
+<!DOCTYPE html>
+<html lang="es" class="overflow-x-hidden w-full max-w-full">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SEIJAKUTECH - Servicio Técnico</title>
+
+	<link rel="stylesheet" media="screen" href="./assets/css/style.css">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						'bg-base': '#050814',
+						ink: '#e6f1ff',
+						primary: '#00f0ff',
+						secondary: '#1a1f3a',
+						muted: '#93a4c9'
+					}
+				}
+			}
+		};
+	</script>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
+
+	<meta name="description" content="SEIJAKUTECH - Servicio Técnico. Ofrecemos soluciones integrales para tus equipos informáticos.">
+	<meta name="robots" content="all">
+</head>
+
+<body id="css-zen-garden" class="overflow-x-hidden w-full max-w-full">
+
+	<!-- ============ NAVEGACIÓN ============ -->
+	<header class="site-header master-header w-full max-w-full transition-all duration-500 ease-in-out" id="site-header">
+		<nav class="nav master-nav w-full max-w-full flex flex-col lg:flex-row items-center justify-between transition-all duration-500 ease-in-out" aria-label="Navegación principal">
+			<a href="#inicio" data-section="inicio" class="nav-brand master-brand transition-all duration-500 ease-in-out">SEIJAKUTECH</a>
+			<ul class="nav-menu master-menu w-full max-w-full lg:w-auto flex flex-wrap items-center justify-center lg:justify-end transition-all duration-500 ease-in-out">
+				<li class="master-menu-item transition-all duration-500 ease-in-out"><a href="#inicio" data-section="inicio" class="nav-link master-link active transition-all duration-300 ease-in-out">Inicio</a></li>
+				<li class="master-menu-item transition-all duration-500 ease-in-out"><a href="#servicios" data-section="servicios" class="nav-link master-link transition-all duration-300 ease-in-out">Servicios</a></li>
+				<li class="master-menu-item transition-all duration-500 ease-in-out"><a href="#cotizacion" data-section="cotizacion" class="nav-link master-link transition-all duration-300 ease-in-out">Cotización</a></li>
+				<li class="master-menu-item transition-all duration-500 ease-in-out"><a href="#contacto" data-section="contacto" class="nav-link master-link transition-all duration-300 ease-in-out">Contactos</a></li>
+				<li class="master-menu-item transition-all duration-500 ease-in-out"><a href="#login" data-section="login" class="nav-link master-link transition-all duration-300 ease-in-out">Mi Cuenta</a></li>
+				<li id="nav-item-personas-registradas" class="master-menu-item transition-all duration-500 ease-in-out hidden" aria-hidden="true">
+					<a href="#personas-registradas" data-section="personas-registradas" class="nav-link master-link transition-all duration-300 ease-in-out text-emerald-300 border border-emerald-400/60 bg-emerald-950/60 rounded-lg px-2.5 py-1 shadow-[0_0_12px_rgba(16,185,129,0.3)]">
+						Personas Registradas
+					</a>
+				</li>
+				<li class="master-menu-item transition-all duration-500 ease-in-out max-w-full flex items-center gap-1.5">
+					<span id="nav-user-status" class="inline-flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-cyan-950/70 border border-[#00f0ff]/40 text-[10px] sm:text-[11px] font-bold text-cyan-300 tracking-wide max-w-full">
+						<img id="nav-user-avatar" src="" alt="Foto de perfil" class="hidden w-5 h-5 rounded-full object-cover border border-[#00f0ff] shrink-0" />
+						<span id="nav-user-dot" class="w-2 h-2 rounded-full bg-slate-400 shrink-0"></span>
+						<span id="nav-user-label" class="truncate max-w-[140px] sm:max-w-[190px]">Sin sesión</span>
+					</span>
+					<button type="button" id="nav-logout-btn" title="Cerrar sesión activa" class="hidden px-2 py-0.5 sm:py-1 rounded-full border border-red-400/70 bg-red-950/70 text-[10px] font-black uppercase tracking-wider text-red-200 hover:bg-red-500 hover:text-white transition-all cursor-pointer shrink-0">
+						Salir
+					</button>
+				</li>
+				<li class="master-menu-item transition-all duration-500 ease-in-out">
+					<button type="button" id="open-cart-btn" aria-label="Abrir carrito de compras" class="nav-link master-link transition-all duration-300 ease-in-out cursor-pointer gap-1 sm:gap-1.5">
+						<svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<circle cx="9" cy="21" r="1"></circle>
+							<circle cx="20" cy="21" r="1"></circle>
+							<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+						</svg>
+						<span>Carrito</span>
+						<span id="cart-count" class="inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] sm:text-[11px] font-black leading-none rounded-full bg-[#00f0ff] text-slate-950 shadow-[0_0_10px_#00f0ff]">0</span>
+					</button>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Fondo tecnológico dinámico -->
+	<aside class="cyber-bg w-full max-w-full" aria-hidden="true">
+		<div class="cyber-bg-grid"></div>
+		<div class="cyber-bg-glow-cyan"></div>
+		<div class="cyber-bg-glow-violet"></div>
+	</aside>
+
+	<!-- ============ CONTENIDO PRINCIPAL SPA ============ -->
+	<main id="main-content" class="w-full max-w-full flex-1 flex flex-col">
+
+	<!-- ============ VISTA SPA: INICIO ============ -->
+	<section id="inicio" data-view="inicio" aria-label="Inicio y Autenticación" class="spa-section w-full max-w-full min-h-[calc(100dvh-110px)] flex flex-col items-center justify-center">
+		<!-- ============ HERO ============ -->
+		<section class="hero w-full max-w-full min-h-[calc(100dvh-110px)] flex items-center justify-center px-1 sm:px-4 md:px-6 pt-28 sm:pt-24 lg:pt-16 pb-6 lg:pb-2" id="hero">
+			<div class="max-w-5xl mx-auto w-full max-w-full grid grid-cols-1 md:grid-cols-2 lg:flex lg:flex-row gap-4 sm:gap-6 lg:gap-8 items-center text-center md:text-left">
+				<div class="flex flex-col items-center md:items-start scroll-reveal is-visible w-full max-w-full min-w-0 lg:flex-1">
+					<header class="flex flex-col sm:flex-row flex-wrap items-center justify-center md:justify-start gap-1.5 sm:gap-2 w-full max-w-full">
+						<h1 class="hero-title text-xl sm:text-2xl md:text-3xl lg:text-4xl m-0 leading-none break-words">SEIJAKUTECH</h1>
+						<h2 class="hero-badge mt-0 px-2 sm:px-2.5 py-0.5 text-[10px] md:text-xs">Servicio Técnico</h2>
+					</header>
+					<p class="hero-text mt-1.5 mb-2.5 text-xs sm:text-sm leading-snug w-full max-w-full">Soluciones integrales para tus equipos informáticos. Inicia sesión, regístrate o entra como invitado.</p>
+
+					<!-- Panel interactivo de Acceso / Registro / Invitado en #inicio conectado a MariaDB -->
+					<article class="w-full max-w-full lg:max-w-md glass-panel-container p-3 sm:p-4 text-left min-w-0" aria-label="Panel de autenticación y acceso">
+						<!-- Insignias cibernéticas: Motor MariaDB 11.4 + Escudo de Ciberseguridad -->
+						<header class="flex flex-col gap-1.5 mb-2.5 w-full max-w-full">
+							<div class="flex justify-center md:justify-start w-full max-w-full">
+								<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl sm:rounded-full bg-cyan-950/70 border border-[#00f0ff]/60 shadow-[0_0_12px_rgba(0,240,255,0.25)] max-w-full">
+									<span class="relative flex h-2 w-2 shrink-0">
+										<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f0ff] opacity-75"></span>
+										<span class="relative inline-flex rounded-full h-2 w-2 bg-[#00f0ff] shadow-[0_0_8px_#00f0ff]"></span>
+									</span>
+									<span class="text-[9.5px] sm:text-[10px] font-bold tracking-wide uppercase text-cyan-300 leading-tight break-words">Motor de Base de Datos: MariaDB 11.4 Conectado</span>
+								</div>
+							</div>
+							<div class="flex justify-center md:justify-start w-full max-w-full">
+								<div id="cyber-security-shield" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-xl sm:rounded-full bg-emerald-950/70 border border-emerald-400/60 shadow-[0_0_12px_rgba(16,185,129,0.25)] max-w-full">
+									<svg class="w-3 h-3 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+										<path d="m9 12 2 2 4-4"></path>
+									</svg>
+									<span class="text-[9px] sm:text-[9.5px] font-bold tracking-wide uppercase text-emerald-300 leading-tight break-words">Protección Activa: Anti-SQLi | Bcrypt Hash | Brute-Force Lock</span>
+								</div>
+							</div>
+						</header>
+
+						<!-- Banner de Bloqueo por Fuerza Bruta (Temporizador regresivo de 30s) -->
+						<div id="brute-force-lock-banner" role="alert" aria-live="assertive" class="hidden mb-2 px-3 py-1.5 rounded-lg bg-red-950/90 border border-red-400 text-red-200 text-[11px] font-mono shadow-[0_0_16px_rgba(239,68,68,0.45)] w-full max-w-full">
+							<div class="flex flex-wrap items-center justify-between gap-2">
+								<span class="font-bold uppercase tracking-wider text-red-300">🔒 Bloqueo Brute-Force Activo</span>
+								<span id="brute-force-timer" class="px-2 py-0.5 rounded bg-red-500/30 border border-red-400 font-black text-white">30s</span>
+							</div>
+							<p class="text-[10px] text-red-200/90 m-0 mt-0.5">3 intentos fallidos detectados. Formulario bloqueado temporalmente.</p>
+						</div>
+
+						<!-- Pestañas (Tabs): Iniciar Sesión / Registrarse -->
+						<div id="auth-tabs-container" class="grid grid-cols-1 sm:grid-cols-2 gap-1.5 p-1 rounded-lg bg-slate-950/80 border border-cyan-400/30 mb-2.5 w-full max-w-full" role="tablist">
+							<button type="button" id="tab-btn-login" role="tab" aria-selected="true" class="w-full py-1.5 px-2.5 rounded-md text-xs font-black uppercase tracking-wider transition-all cursor-pointer bg-[#00f0ff] text-slate-950 shadow-[0_0_12px_rgba(0,240,255,0.5)]">
+								Iniciar Sesión
+							</button>
+							<button type="button" id="tab-btn-register" role="tab" aria-selected="false" class="w-full py-1.5 px-2.5 rounded-md text-xs font-black uppercase tracking-wider transition-all cursor-pointer text-cyan-300 hover:text-white">
+								Registrarse
+							</button>
+						</div>
+
+						<!-- Panel de Sesión Activa: Correo bloqueado (readonly/disabled) + Foto de Perfil Editable + Cerrar Sesión -->
+						<div id="active-session-hero-panel" class="hidden flex-col gap-2.5 mb-2.5 p-3 rounded-xl bg-slate-950/90 border border-[#00f0ff]/60 shadow-[0_0_18px_rgba(0,240,255,0.2)] w-full max-w-full">
+							<div class="flex items-center justify-between gap-2 pb-2 border-b border-cyan-400/25">
+								<span class="text-[11px] font-black uppercase tracking-wider text-[#00f0ff]">✓ Sesión Activa Verificada</span>
+								<span class="px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-400/50 text-[9.5px] font-bold uppercase text-emerald-300">Persistente en BD</span>
+							</div>
+
+							<!-- Foto de perfil editable con guardado persistente -->
+							<div class="flex flex-col sm:flex-row items-center gap-3 w-full">
+								<div class="relative w-16 h-16 rounded-full border-2 border-[#00f0ff] bg-slate-900 overflow-hidden flex items-center justify-center shrink-0 shadow-[0_0_14px_rgba(0,240,255,0.45)]">
+									<img id="hero-profile-avatar" src="" alt="Foto de perfil del usuario" class="hidden w-full h-full object-cover" />
+									<svg id="hero-profile-placeholder" class="w-9 h-9 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+										<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+										<circle cx="12" cy="7" r="4"></circle>
+									</svg>
+								</div>
+								<div class="flex flex-col items-center sm:items-start gap-1.5 min-w-0 w-full">
+									<p id="hero-session-name" class="text-xs sm:text-sm font-black text-white truncate max-w-full m-0">Usuario</p>
+									<label for="hero-photo-input" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#00f0ff]/70 bg-cyan-950/80 text-[#00f0ff] text-[11px] font-bold uppercase tracking-wider hover:bg-[#00f0ff] hover:text-slate-950 transition-all cursor-pointer shadow-[0_0_10px_rgba(0,240,255,0.25)]">
+										<svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+											<circle cx="12" cy="13" r="4"></circle>
+										</svg>
+										<span>Subir / Editar Foto de Perfil</span>
+									</label>
+									<input type="file" id="hero-photo-input" accept="image/*" class="hidden" />
+									<span id="hero-photo-feedback" class="text-[10px] font-semibold text-emerald-300 hidden">✓ Foto guardada en la base de datos</span>
+								</div>
+							</div>
+
+							<!-- Correo bloqueado (readonly + disabled) mientras la sesión está activa -->
+							<div class="flex flex-col gap-1 w-full">
+								<div class="flex flex-wrap items-center justify-between gap-1">
+									<label for="hero-locked-email" class="text-[10.5px] font-bold uppercase tracking-wider text-cyan-300">Cuenta de Sesión</label>
+									<span class="inline-flex items-center gap-1 text-[9.5px] font-bold uppercase text-amber-300 bg-amber-950/60 border border-amber-400/40 px-2 py-0.5 rounded-full">
+										🔒 Bloqueado (Inmodificable)
+									</span>
+								</div>
+								<input
+									type="text"
+									id="hero-locked-email"
+									readonly
+									disabled
+									value=""
+									aria-readonly="true"
+									class="w-full max-w-full py-1.5 px-3 text-xs sm:text-sm rounded-lg bg-slate-900/95 border border-amber-400/50 text-slate-300 font-mono opacity-80 cursor-not-allowed select-all"
+								/>
+								<span class="text-[10px] text-slate-400 leading-tight">La cuenta permanece bloqueada por seguridad hasta que cierres sesión explícitamente.</span>
+							</div>
+
+							<!-- Acceso directo exclusivo para el usuario "administrador" a Personas Registradas -->
+							<button type="button" id="hero-admin-users-btn" class="hidden w-full py-2 px-3 rounded-lg border-2 border-emerald-400/80 bg-emerald-950/70 text-emerald-200 text-xs font-black uppercase tracking-wider hover:bg-emerald-500 hover:text-slate-950 hover:shadow-[0_0_16px_rgba(16,185,129,0.65)] transition-all cursor-pointer">
+								👥 Ver Personas Registradas (Panel Admin)
+							</button>
+
+							<!-- Botón explícito para Cerrar Sesión y desbloquear correo -->
+							<button type="button" id="hero-logout-btn" class="w-full py-2 px-3 rounded-lg border-2 border-red-400/80 bg-red-950/60 text-red-200 text-xs font-black uppercase tracking-wider hover:bg-red-500 hover:text-white hover:shadow-[0_0_16px_rgba(239,68,68,0.65)] transition-all cursor-pointer mt-0.5">
+								Cerrar Sesión para Cambiar de Cuenta
+							</button>
+						</div>
+
+						<!-- Formulario Tab 1: Iniciar Sesión (@gmail.com o excepción "administrador") -->
+						<form id="login-form" class="flex flex-col gap-2 w-full max-w-full" novalidate>
+							<div class="flex flex-col gap-0.5 w-full max-w-full">
+								<div class="flex flex-wrap items-center justify-between gap-1">
+									<label for="login-usuario" class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Usuario / Correo (@gmail.com)</label>
+									<span id="login-email-lock-badge" class="hidden text-[9.5px] font-bold uppercase text-amber-300">🔒 Bloqueado</span>
+								</div>
+								<input
+									type="text"
+									id="login-usuario"
+									name="correo"
+									required
+									autocapitalize="none"
+									autocomplete="username"
+									placeholder="tu_correo@gmail.com"
+									pattern="^(administrador|[a-zA-Z0-9._%+-]+@gmail\.com)$"
+									aria-describedby="login-gmail-hint"
+									class="w-full max-w-full py-1.5 px-3 text-xs sm:text-sm rounded-lg bg-slate-950/80 border border-cyan-400/40 text-slate-100 placeholder-slate-500 transition-all duration-300 hover:border-[#00f0ff] hover:shadow-[0_0_12px_rgba(0,240,255,0.3)] focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff]/50"
+								/>
+								<span id="login-gmail-hint" class="text-[10px] font-medium text-slate-400 leading-tight">Requisito estricto: correos terminados en <strong class="text-cyan-300">@gmail.com</strong></span>
+							</div>
+
+							<div class="flex flex-col gap-0.5 w-full max-w-full">
+								<div class="flex flex-wrap items-center justify-between gap-1">
+									<label for="login-password" class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Contraseña</label>
+									<span id="login-pwd-strength-text" class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Nivel: —</span>
+								</div>
+								<div class="relative flex items-center w-full max-w-full">
+									<input
+										type="password"
+										id="login-password"
+										name="password"
+										required
+										autocomplete="current-password"
+										placeholder="Ingresa tu contraseña guardada"
+										class="w-full max-w-full py-1.5 pl-3 pr-9 text-xs sm:text-sm rounded-lg bg-slate-950/80 border border-cyan-400/40 text-slate-100 placeholder-slate-500 transition-all duration-300 hover:border-[#00f0ff] hover:shadow-[0_0_12px_rgba(0,240,255,0.3)] focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff]/50"
+									/>
+									<button type="button" data-toggle-pwd="login-password" aria-label="Mostrar u ocultar contraseña" class="absolute right-2.5 text-cyan-400 hover:text-[#00f0ff] cursor-pointer p-0.5 transition-colors">
+										<svg class="w-4 h-4 eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+											<circle cx="12" cy="12" r="3"></circle>
+										</svg>
+										<svg class="w-4 h-4 eye-closed hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+											<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+											<line x1="1" y1="1" x2="23" y2="23"></line>
+										</svg>
+									</button>
+								</div>
+								<!-- Barra visual de nivel de seguridad (Débil, Media, Fuerte) -->
+								<div class="w-full max-w-full h-1.5 rounded-full bg-slate-900/90 border border-cyan-400/20 overflow-hidden mt-0.5">
+									<div id="login-pwd-strength-bar" class="h-full w-0 transition-all duration-300 rounded-full"></div>
+								</div>
+							</div>
+
+							<button type="submit" id="login-submit-btn" class="btn w-full max-w-full text-center cursor-pointer py-1.5 px-3 text-xs sm:text-sm mt-0.5">Iniciar Sesión con @gmail.com</button>
+						</form>
+
+						<!-- Formulario Tab 2: Registrarse (Solo @gmail.com + Foto de Perfil Persistente) -->
+						<form id="register-form" class="hidden flex-col gap-2 w-full max-w-full" novalidate>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-2 w-full max-w-full">
+								<div class="flex flex-col gap-0.5 min-w-0 w-full max-w-full">
+									<label for="register-nombre" class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Nombre</label>
+									<input
+										type="text"
+										id="register-nombre"
+										name="nombre"
+										required
+										placeholder="Tu nombre"
+										class="w-full max-w-full py-1.5 px-3 text-xs sm:text-sm rounded-lg bg-slate-950/80 border border-cyan-400/40 text-slate-100 placeholder-slate-500 transition-all duration-300 hover:border-[#00f0ff] focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff]/50"
+									/>
+								</div>
+
+								<div class="flex flex-col gap-0.5 min-w-0 w-full max-w-full">
+									<label for="register-correo" class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Correo (@gmail.com)</label>
+									<input
+										type="email"
+										id="register-correo"
+										name="correo"
+										required
+										placeholder="usuario@gmail.com"
+										pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$"
+										aria-describedby="register-gmail-hint"
+										class="w-full max-w-full py-1.5 px-3 text-xs sm:text-sm rounded-lg bg-slate-950/80 border border-cyan-400/40 text-slate-100 placeholder-slate-500 transition-all duration-300 hover:border-[#00f0ff] focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff]/50"
+									/>
+									<span id="register-gmail-hint" class="text-[9.5px] font-medium text-slate-400 leading-tight">Solo se aceptan cuentas <strong class="text-cyan-300">@gmail.com</strong></span>
+								</div>
+							</div>
+
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-2 w-full max-w-full">
+								<div class="flex flex-col gap-0.5 min-w-0 w-full max-w-full">
+									<label for="register-usuario" class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Alias / Usuario</label>
+									<input
+										type="text"
+										id="register-usuario"
+										name="usuario"
+										placeholder="nuevo_usuario"
+										class="w-full max-w-full py-1.5 px-3 text-xs sm:text-sm rounded-lg bg-slate-950/80 border border-cyan-400/40 text-slate-100 placeholder-slate-500 transition-all duration-300 hover:border-[#00f0ff] focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff]/50"
+									/>
+								</div>
+
+								<div class="flex flex-col gap-0.5 min-w-0 w-full max-w-full">
+									<div class="flex flex-wrap items-center justify-between gap-1">
+										<label for="register-password" class="text-[11px] font-bold uppercase tracking-wider text-cyan-400">Contraseña</label>
+										<span id="register-pwd-strength-text" class="text-[9.5px] font-bold uppercase text-slate-400">Nivel: —</span>
+									</div>
+									<div class="relative flex items-center w-full max-w-full">
+										<input
+											type="password"
+											id="register-password"
+											name="password"
+											required
+											placeholder="Crea tu contraseña"
+											class="w-full max-w-full py-1.5 pl-3 pr-8 text-xs sm:text-sm rounded-lg bg-slate-950/80 border border-cyan-400/40 text-slate-100 placeholder-slate-500 transition-all duration-300 hover:border-[#00f0ff] focus:outline-none focus:border-[#00f0ff] focus:ring-1 focus:ring-[#00f0ff]/50"
+										/>
+										<button type="button" data-toggle-pwd="register-password" aria-label="Mostrar u ocultar contraseña de registro" class="absolute right-2 text-cyan-400 hover:text-[#00f0ff] cursor-pointer p-0.5 transition-colors">
+											<svg class="w-4 h-4 eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+												<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+												<circle cx="12" cy="12" r="3"></circle>
+											</svg>
+											<svg class="w-4 h-4 eye-closed hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+												<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+												<line x1="1" y1="1" x2="23" y2="23"></line>
+											</svg>
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- Foto de perfil opcional durante el registro -->
+							<div class="flex items-center gap-2.5 p-2 rounded-lg bg-slate-950/70 border border-cyan-400/30 w-full">
+								<div class="w-10 h-10 rounded-full border border-[#00f0ff]/60 bg-slate-900 overflow-hidden flex items-center justify-center shrink-0">
+									<img id="register-photo-preview" src="" alt="Previsualización de foto" class="hidden w-full h-full object-cover" />
+									<svg id="register-photo-placeholder" class="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+										<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+										<circle cx="12" cy="7" r="4"></circle>
+									</svg>
+								</div>
+								<div class="flex flex-col min-w-0 flex-1">
+									<label for="register-photo-input" class="text-[10.5px] font-bold uppercase tracking-wider text-cyan-300 hover:text-[#00f0ff] cursor-pointer underline">
+										+ Elegir Foto de Perfil (Opcional)
+									</label>
+									<span id="register-photo-name" class="text-[9.5px] text-slate-400 truncate">Se guardará en la base de datos junto a tu cuenta</span>
+									<input type="file" id="register-photo-input" accept="image/*" class="hidden" />
+								</div>
+							</div>
+
+							<!-- Barra visual de nivel de seguridad en Registro (Débil, Media, Fuerte) -->
+							<div class="w-full max-w-full h-1.5 rounded-full bg-slate-900/90 border border-cyan-400/20 overflow-hidden">
+								<div id="register-pwd-strength-bar" class="h-full w-0 transition-all duration-300 rounded-full"></div>
+							</div>
+
+							<button type="submit" id="register-submit-btn" class="btn w-full max-w-full text-center cursor-pointer py-1.5 px-3 text-xs sm:text-sm mt-0.5">Registrar Cuenta @gmail.com</button>
+						</form>
+
+						<!-- Notificación de Correo Automático de Bienvenida (Exclusivo en 1er Registro) -->
+						<div id="welcome-email-banner" role="status" aria-live="polite" class="hidden mt-2 p-2.5 rounded-xl bg-emerald-950/90 border border-emerald-400/80 text-emerald-100 text-[10.5px] shadow-[0_0_18px_rgba(16,185,129,0.35)] w-full max-w-full">
+							<div class="flex items-center justify-between gap-2 mb-1">
+								<span class="font-black uppercase tracking-wider text-emerald-300">📧 Correo de Bienvenida Enviado (1ª Vez)</span>
+								<span class="px-1.5 py-0.5 rounded bg-emerald-500/20 border border-emerald-400/50 text-[9px] font-bold uppercase text-emerald-200">Envío Único</span>
+							</div>
+							<p id="welcome-email-details" class="text-[10px] text-slate-200 leading-snug m-0 mb-1.5"></p>
+							<a id="welcome-email-gmail-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block text-[10px] font-bold uppercase tracking-wider text-[#00f0ff] underline hover:text-white">
+								Ver copia de bienvenida en Gmail
+							</a>
+						</div>
+
+						<!-- Botón destacado: Entrar como Invitado -->
+						<footer class="mt-2 pt-2 border-t border-cyan-400/25 flex flex-col w-full max-w-full">
+							<button type="button" id="guest-access-btn" class="w-full max-w-full py-1.5 px-3 text-xs sm:text-sm rounded-lg border border-violet-400/70 bg-violet-950/50 text-violet-200 font-bold uppercase tracking-wider transition-all duration-200 hover:bg-violet-500 hover:text-white hover:shadow-[0_0_18px_rgba(139,92,246,0.75)] cursor-pointer">
+								Entrar como Invitado
+							</button>
+						</footer>
+
+						<!-- Contenedor de respuesta de consultas a MariaDB -->
+						<aside id="mariadb-login-response" role="status" aria-live="polite" class="hidden mt-1.5 rounded-lg p-2 border text-left text-[10px] leading-tight font-mono transition-all duration-300 w-full max-w-full break-words"></aside>
+					</article>
+				</div>
+
+				<!-- Ilustración SVG futurista principal con animación de flotación y zoom -->
+				<aside aria-label="Ilustración tecnológica SEIJAKUTECH" class="flex flex-col items-center justify-center gap-3 scroll-reveal is-visible w-full max-w-full min-w-0 lg:flex-1">
+					<figure class="visual-zoom-box hero-float w-full max-w-full sm:max-w-sm p-2 sm:p-3 glass-panel-container flex items-center justify-center m-0">
+						<svg class="neon-svg w-full max-w-full h-auto max-h-36 sm:max-h-44 lg:max-h-64 mx-auto" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Procesador holográfico y circuitos neón SEIJAKUTECH">
+							<defs>
+								<linearGradient id="cyberCyanViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+									<stop offset="0%" stop-color="#00f0ff" />
+									<stop offset="50%" stop-color="#0066ff" />
+									<stop offset="100%" stop-color="#8b5cf6" />
+								</linearGradient>
+								<radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+									<stop offset="0%" stop-color="#00f0ff" stop-opacity="0.45" />
+									<stop offset="60%" stop-color="#0066ff" stop-opacity="0.15" />
+									<stop offset="100%" stop-color="#050814" stop-opacity="0" />
+								</radialGradient>
+							</defs>
+							<!-- Resplandor central -->
+							<circle cx="210" cy="160" r="135" fill="url(#coreGlow)" />
+							<!-- Anillos HUD orbitales -->
+							<circle cx="210" cy="160" r="118" stroke="url(#cyberCyanViolet)" stroke-width="1.5" stroke-dasharray="10 6" opacity="0.75" />
+							<circle cx="210" cy="160" r="94" stroke="#00f0ff" stroke-width="1.2" stroke-dasharray="24 8 4 8" opacity="0.6" />
+							<!-- Pistas de circuito neón -->
+							<path d="M30 80 H95 L130 115 M390 80 H325 L290 115 M30 240 H95 L130 205 M390 240 H325 L290 205" stroke="url(#cyberCyanViolet)" stroke-width="2.2" stroke-linecap="round" />
+							<path d="M210 20 V65 M210 255 V300 M60 160 H115 M305 160 H360" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" />
+							<circle cx="30" cy="80" r="4.5" fill="#00f0ff" />
+							<circle cx="390" cy="80" r="4.5" fill="#8b5cf6" />
+							<circle cx="30" cy="240" r="4.5" fill="#8b5cf6" />
+							<circle cx="390" cy="240" r="4.5" fill="#00f0ff" />
+							<circle cx="210" cy="20" r="4.5" fill="#00f0ff" />
+							<circle cx="210" cy="300" r="4.5" fill="#00f0ff" />
+							<!-- Procesador cuántico central -->
+							<rect x="140" y="90" width="140" height="140" rx="16" fill="#071028" stroke="url(#cyberCyanViolet)" stroke-width="2.5" />
+							<rect x="158" y="108" width="104" height="104" rx="10" fill="#0a1938" stroke="#00f0ff" stroke-width="1.5" opacity="0.9" />
+							<!-- Pines del procesador -->
+							<path d="M165 78 V90 M185 78 V90 M205 78 V90 M225 78 V90 M245 78 V90 M165 230 V242 M185 230 V242 M205 230 V242 M225 230 V242 M245 230 V242" stroke="#00f0ff" stroke-width="2.5" />
+							<path d="M128 115 H140 M128 135 H140 M128 155 H140 M128 175 H140 M128 195 H140 M280 115 H292 M280 135 H292 M280 155 H292 M280 175 H292 M280 195 H292" stroke="#00f0ff" stroke-width="2.5" />
+							<!-- Escudo cibernético interior -->
+							<polygon points="210,120 244,136 244,168 210,198 176,168 176,136" fill="rgba(0, 240, 255, 0.14)" stroke="#00f0ff" stroke-width="2" />
+							<path d="M198 160 L207 169 L225 149" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</figure>
+
+					<!-- Fotografía tecnológica con marco cian, filtro oscuro y respaldo onerror -->
+					<figure class="cyber-img-frame visual-zoom-box hidden md:block w-full max-w-full sm:max-w-sm h-28 m-0">
+						<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Circuitos y hardware de alto rendimiento" loading="lazy" onerror="this.classList.add('hidden');" />
+					</figure>
+				</aside>
+			</div>
+		</section>
+
+		<!-- ============ SERVICIOS (RESUMEN INICIO) ============ -->
+		<section class="services hidden" id="services">
+			<h2 class="section-title scroll-reveal">Catálogo de Servicios</h2>
+			<div class="services-grid">
+				<article class="service-card scroll-reveal">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="6" y="8" width="36" height="26" rx="4" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+							<path d="M16 14 L23 13 V20 H16 V14 Z M25 12.8 L32 12 V20 H25 V12.8 Z M16 22 H23 V28 L16 27 V22 Z M25 22 H32 V29 L25 28.2 V22 Z" fill="#00f0ff" />
+							<path d="M18 40 H30 M24 34 V40" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3>Formateo y Reinstalación de Windows</h3>
+					<ul>
+						<li>Instalación de Windows 10/11</li>
+						<li>Configuración inicial</li>
+						<li>Instalación de controladores</li>
+					</ul>
+				</article>
+				<article class="service-card scroll-reveal">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<circle cx="24" cy="24" r="16" stroke="#00f0ff" stroke-width="2.2" stroke-dasharray="6 3" />
+							<path d="M24 14 V24 L31 28" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" />
+							<path d="M15 31 L21 25 L25 28 L33 18" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<h3>Optimización y Mantenimiento</h3>
+					<ul>
+						<li>Limpieza de archivos innecesarios</li>
+						<li>Optimización del sistema</li>
+						<li>Eliminación de programas innecesarios</li>
+						<li>Configuración para mejorar el rendimiento</li>
+					</ul>
+				</article>
+				<article class="service-card scroll-reveal">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M24 6 L38 12 V23 C38 32.5 31.8 39.8 24 42 C16.2 39.8 10 32.5 10 23 V12 L24 6 Z" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+							<path d="M18 24 L22 28 L30 19" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<h3>Eliminación de Virus y Malware</h3>
+					<ul>
+						<li>Detección de amenazas</li>
+						<li>Limpieza del equipo</li>
+						<li>Configuración de seguridad</li>
+					</ul>
+				</article>
+				<article class="service-card scroll-reveal">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<circle cx="24" cy="24" r="17" stroke="#00f0ff" stroke-width="2.2" />
+							<circle cx="24" cy="24" r="4" fill="#00f0ff" />
+							<path d="M24 10 C28 10 30 15 26 20 M38 24 C38 28 33 30 28 26 M24 38 C20 38 18 33 22 28 M10 24 C10 20 15 18 20 22" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3>Limpieza Interna</h3>
+					<ul>
+						<li>Limpieza de polvo</li>
+						<li>Limpieza de ventiladores</li>
+						<li>Cambio de pasta térmica</li>
+						<li>Revisión de temperaturas</li>
+					</ul>
+				</article>
+				<article class="service-card scroll-reveal">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="8" y="10" width="32" height="28" rx="4" stroke="#00f0ff" stroke-width="2.2" />
+							<path d="M13 24 H18 L21 17 L26 31 L29 24 H35" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<h3>Diagnóstico y Reparación</h3>
+					<ul>
+						<li>Equipos que no encienden</li>
+						<li>Pantallas azules</li>
+						<li>Problemas de sobrecalentamiento</li>
+						<li>Lentitud</li>
+						<li>Fallos de hardware</li>
+						<li>Problemas de Windows</li>
+					</ul>
+				</article>
+				<article class="service-card scroll-reveal">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="10" y="28" width="28" height="10" rx="3" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+							<circle cx="16" cy="33" r="1.8" fill="#00f0ff" />
+							<circle cx="22" cy="33" r="1.8" fill="#8b5cf6" />
+							<path d="M16 20 C20.5 15.5 27.5 15.5 32 20 M12 15 C18.8 8.5 29.2 8.5 36 15" stroke="#00f0ff" stroke-width="2.2" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3>Configuración de Redes</h3>
+					<ul>
+						<li>Configuración de Wi-Fi</li>
+						<li>Instalación/configuración de routers</li>
+						<li>Conexiones Ethernet</li>
+						<li>Configuración de impresoras en red</li>
+					</ul>
+				</article>
+				<article class="service-card scroll-reveal">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="14" y="6" width="20" height="36" rx="3" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+							<line x1="18" y1="12" x2="30" y2="12" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round" />
+							<circle cx="24" cy="24" r="5" stroke="#00f0ff" stroke-width="2" />
+							<circle cx="24" cy="35" r="2" fill="#00f0ff" />
+						</svg>
+					</div>
+					<h3>Armado y Actualización de PC</h3>
+					<ul>
+						<li>Armado de PC</li>
+						<li>Selección de componentes</li>
+						<li>Actualización de equipos</li>
+						<li>Revisión de compatibilidad</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+	</section>
+
+	<!-- ============ VISTA SPA: SERVICIOS ============ -->
+	<section id="servicios" data-view="servicios" aria-label="Catálogo de Servicios" class="spa-section hidden w-full max-w-full pt-28 sm:pt-24 lg:pt-20">
+		<article class="w-full max-w-5xl mx-auto glass-panel-container p-4 sm:p-6 md:p-8 lg:p-12 mb-10 sm:mb-16 scroll-reveal is-visible">
+			<header class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-8 w-full max-w-full">
+				<div class="w-full lg:w-auto min-w-0">
+					<h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-cyan-400 mb-2 uppercase tracking-tighter m-0 bg-transparent shadow-none [text-shadow:0_0_20px_rgba(0,240,255,0.65)] break-words">Catálogo de Servicios</h1>
+					<h2 class="text-sm sm:text-base md:text-xl font-bold bg-cyan-400/20 inline-block px-3 py-1 border border-cyan-400/50 rounded-md max-w-full break-words">Soluciones integrales para tus equipos</h2>
+				</div>
+				<figure class="cyber-img-frame visual-zoom-box w-full max-w-full lg:w-1/3 h-24 sm:h-28 m-0">
+					<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Red cibernética y diagnóstico de sistemas" loading="lazy" onerror="this.classList.add('hidden');" />
+				</figure>
+			</header>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-full">
+				<!-- Servicio 1 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="6" y="8" width="36" height="26" rx="4" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+							<path d="M16 14 L23 13 V20 H16 V14 Z M25 12.8 L32 12 V20 H25 V12.8 Z M16 22 H23 V28 L16 27 V22 Z M25 22 H32 V29 L25 28.2 V22 Z" fill="#00f0ff" />
+							<path d="M18 40 H30 M24 34 V40" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Formateo y reinstalación</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Instalación de Windows 10/11</li>
+						<li>Configuración inicial</li>
+						<li>Instalación de controladores</li>
+					</ul>
+				</article>
+				<!-- Servicio 2 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<circle cx="24" cy="24" r="16" stroke="#00f0ff" stroke-width="2.2" stroke-dasharray="6 3" />
+							<path d="M15 30 L21 24 L25 27 L33 17" stroke="#00f0ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Optimización</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Limpieza de archivos innecesarios</li>
+						<li>Eliminación de programas basura</li>
+						<li>Mejora del rendimiento general</li>
+					</ul>
+				</article>
+				<!-- Servicio 3 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<path d="M24 6 L38 12 V23 C38 32.5 31.8 39.8 24 42 C16.2 39.8 10 32.5 10 23 V12 L24 6 Z" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+							<path d="M18 24 L22 28 L30 19" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Eliminación de virus</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Detección de amenazas y malware</li>
+						<li>Limpieza profunda del equipo</li>
+						<li>Configuración de seguridad (Antivirus)</li>
+					</ul>
+				</article>
+				<!-- Servicio 4 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<circle cx="24" cy="24" r="17" stroke="#00f0ff" stroke-width="2.2" />
+							<circle cx="24" cy="24" r="4" fill="#00f0ff" />
+							<path d="M24 10 C28 10 30 15 26 20 M38 24 C38 28 33 30 28 26 M24 38 C20 38 18 33 22 28 M10 24 C10 20 15 18 20 22" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Limpieza interna</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Limpieza de polvo y ventiladores</li>
+						<li>Cambio de pasta térmica</li>
+						<li>Revisión de temperaturas</li>
+					</ul>
+				</article>
+				<!-- Servicio 5 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="12" y="12" width="24" height="24" rx="4" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+							<rect x="18" y="18" width="12" height="12" rx="2" stroke="#8b5cf6" stroke-width="2" />
+							<path d="M18 6 V12 M24 6 V12 M30 6 V12 M18 36 V42 M24 36 V42 M30 36 V42 M6 18 H12 M6 24 H12 M6 30 H12 M36 18 H42 M36 24 H42 M36 30 H42" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Instalación componentes</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Memoria RAM, SSD/HDD</li>
+						<li>Tarjetas gráficas, Fuentes de poder</li>
+						<li>Ventiladores</li>
+					</ul>
+				</article>
+				<!-- Servicio 6 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="8" y="10" width="32" height="28" rx="4" stroke="#00f0ff" stroke-width="2.2" />
+							<path d="M13 24 H18 L21 17 L26 31 L29 24 H35" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Diagnóstico y reparación</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Equipos que no encienden / Pantallas azules</li>
+						<li>Problemas de sobrecalentamiento</li>
+						<li>Fallos de hardware y Windows</li>
+					</ul>
+				</article>
+				<!-- Servicio 7 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="10" y="28" width="28" height="10" rx="3" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+							<circle cx="16" cy="33" r="1.8" fill="#00f0ff" />
+							<circle cx="22" cy="33" r="1.8" fill="#8b5cf6" />
+							<path d="M16 20 C20.5 15.5 27.5 15.5 32 20 M12 15 C18.8 8.5 29.2 8.5 36 15" stroke="#00f0ff" stroke-width="2.2" stroke-linecap="round" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Redes e Impresoras</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Instalación y limpieza de cabezales</li>
+						<li>Configuración de Wi-Fi y Routers</li>
+						<li>Solución de problemas de red</li>
+					</ul>
+				</article>
+				<!-- Servicio 8 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<ellipse cx="24" cy="13" rx="14" ry="5" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+							<path d="M10 13 V33 C10 35.8 16.3 38 24 38 C31.7 38 38 35.8 38 33 V13" stroke="#00f0ff" stroke-width="2.2" />
+							<path d="M10 23 C10 25.8 16.3 28 24 28 C31.7 28 38 25.8 38 23" stroke="#8b5cf6" stroke-width="2.2" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Respaldos de información</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Copias de seguridad / Migración</li>
+						<li>Clonación de discos</li>
+						<li>Transferencia a SSD nuevo</li>
+					</ul>
+				</article>
+				<!-- Servicio 9 -->
+				<article class="cyber-card scroll-reveal is-visible">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="8" y="15" width="32" height="20" rx="8" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+							<path d="M16 25 H22 M19 22 V28" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" />
+							<circle cx="30" cy="23" r="1.8" fill="#8b5cf6" />
+							<circle cx="34" cy="27" r="1.8" fill="#00f0ff" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Configuración Gaming</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 flex flex-col gap-1">
+						<li>Optimización de Windows para juegos</li>
+						<li>Configuración gráfica y Drivers</li>
+						<li>Mejora de FPS y rendimiento</li>
+					</ul>
+				</article>
+				<!-- Servicio 10 -->
+				<article class="cyber-card scroll-reveal is-visible md:col-span-2 lg:col-span-3">
+					<div class="card-visual-header visual-zoom-box">
+						<svg class="neon-svg w-11 h-11" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<rect x="14" y="6" width="20" height="36" rx="3" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+							<line x1="18" y1="12" x2="30" y2="12" stroke="#8b5cf6" stroke-width="2.2" stroke-linecap="round" />
+							<circle cx="24" cy="24" r="5" stroke="#00f0ff" stroke-width="2" />
+							<circle cx="24" cy="35" r="2" fill="#00f0ff" />
+						</svg>
+					</div>
+					<h3 class="text-base sm:text-lg font-bold text-slate-100 mb-2.5 sm:mb-3 break-words">Armado de PC y Soporte Técnico General</h3>
+					<ul class="list-disc pl-4 sm:pl-5 text-xs sm:text-sm font-medium text-slate-300 m-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1">
+						<li>Armado de PC Gamer o de Oficina</li>
+						<li>Asesoría en selección de componentes y compatibilidad</li>
+						<li>Asistencia técnica presencial y remota</li>
+						<li>Instalación y configuración de programas profesionales</li>
+					</ul>
+				</article>
+			</div>
+
+			<footer class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-cyan-400/40 text-center flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 w-full max-w-full">
+				<a href="#cotizacion" data-section="cotizacion" class="btn w-full sm:w-auto text-center">Ver Precios</a>
+				<a href="#contacto" data-section="contacto" class="btn w-full sm:w-auto text-center">Agendar Servicio</a>
+			</footer>
+		</article>
+	</section>
+
+	<!-- ============ VISTA SPA: COTIZACIÓN ============ -->
+	<section id="cotizacion" data-view="cotizacion" aria-label="Cotización y Precios" class="spa-section hidden w-full max-w-full pt-28 sm:pt-24 lg:pt-20">
+		<article class="w-full max-w-5xl mx-auto glass-panel-container p-4 sm:p-6 md:p-8 lg:p-12 mb-10 sm:mb-12 scroll-reveal is-visible">
+			<header class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 sm:gap-6 mb-6 sm:mb-8 w-full max-w-full">
+				<div class="w-full md:w-auto min-w-0">
+					<h1 class="text-2xl sm:text-3xl lg:text-4xl font-black text-cyan-400 mb-2 uppercase tracking-tighter m-0 bg-transparent shadow-none [text-shadow:0_0_20px_rgba(0,240,255,0.65)] break-words">Cotización</h1>
+					<h2 class="text-sm sm:text-base md:text-xl font-bold bg-cyan-400/20 inline-block px-3 py-1 border border-cyan-400/50 rounded-md max-w-full break-words">Lista de Precios de Mantenimiento</h2>
+				</div>
+				<div class="visual-zoom-box w-14 h-14 sm:w-20 sm:h-20 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-900/60 shrink-0">
+					<svg class="neon-svg w-9 h-9 sm:w-12 sm:h-12" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+						<rect x="8" y="8" width="32" height="32" rx="6" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+						<path d="M16 18 H32 M16 24 H26 M16 30 H22" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" />
+						<circle cx="31" cy="29" r="4" stroke="#8b5cf6" stroke-width="2.2" />
+					</svg>
+				</div>
+			</header>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-full">
+				<!-- Tarjeta 1: Formateo de Windows -->
+				<article class="price-card scroll-reveal is-visible flex flex-col justify-between gap-4 w-full max-w-full">
+					<header class="flex flex-col gap-3 w-full max-w-full">
+						<div class="flex flex-wrap items-center justify-between gap-2 w-full">
+							<div class="visual-zoom-box w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-950/70 shrink-0">
+								<svg class="neon-svg w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<path d="M10 14 L22 12.5 V23 H10 V14 Z M25 12 L38 10 V23 H25 V12 Z M10 26 H22 V36.5 L10 35 V26 Z M25 26 H38 V38 L25 36.5 V26 Z" fill="#00f0ff" />
+								</svg>
+							</div>
+							<span class="px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-black uppercase tracking-wider bg-cyan-400/20 text-[#00f0ff] border border-[#00f0ff]/60 shadow-[0_0_12px_rgba(0,240,255,0.35)]">
+								Más Solicitado
+							</span>
+						</div>
+						<div class="flex flex-col gap-1 text-left w-full min-w-0">
+							<h3 class="text-base sm:text-lg font-bold text-slate-100 leading-snug break-words">Formateo de Windows (10/11)</h3>
+							<p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Instalación limpia del sistema, drivers oficiales y optimización inicial.</p>
+						</div>
+					</header>
+					<footer class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between pt-3 sm:pt-4 border-t border-cyan-400/25 gap-3 w-full">
+						<span class="text-xl sm:text-2xl font-black text-cyan-400 [text-shadow:0_0_12px_rgba(0,240,255,0.45)]">$25.000</span>
+						<button type="button" data-add-cart data-service="Formateo de Windows (10/11)" data-price="25000" class="w-full sm:w-auto px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#00f0ff]/70 bg-cyan-950/70 text-[#00f0ff] transition-all duration-200 hover:bg-[#00f0ff] hover:text-slate-950 hover:shadow-[0_0_18px_rgba(0,240,255,0.75)] cursor-pointer text-center">Agregar al Carrito</button>
+					</footer>
+				</article>
+
+				<!-- Tarjeta 2: Limpieza Interna y Pasta Térmica -->
+				<article class="price-card scroll-reveal is-visible flex flex-col justify-between gap-4 w-full max-w-full">
+					<header class="flex flex-col gap-3 w-full max-w-full">
+						<div class="flex flex-wrap items-center justify-between gap-2 w-full">
+							<div class="visual-zoom-box w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-950/70 shrink-0">
+								<svg class="neon-svg w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<circle cx="24" cy="24" r="16" stroke="#00f0ff" stroke-width="2.2" />
+									<circle cx="24" cy="24" r="4" fill="#8b5cf6" />
+									<path d="M24 10 C28 10 30 15 26 20 M38 24 C38 28 33 30 28 26 M24 38 C20 38 18 33 22 28 M10 24 C10 20 15 18 20 22" stroke="#00f0ff" stroke-width="2.2" stroke-linecap="round" />
+								</svg>
+							</div>
+							<span class="px-2.5 py-1 rounded-full text-[10px] sm:text-[11px] font-black uppercase tracking-wider bg-violet-500/20 text-violet-300 border border-violet-400/60 shadow-[0_0_12px_rgba(139,92,246,0.35)]">
+								Recomendado
+							</span>
+						</div>
+						<div class="flex flex-col gap-1 text-left w-full min-w-0">
+							<h3 class="text-base sm:text-lg font-bold text-slate-100 leading-snug break-words">Limpieza Interna y Pasta Térmica</h3>
+							<p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Desempolvado completo de ventiladores, renovación térmica y test de temperatura.</p>
+						</div>
+					</header>
+					<footer class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between pt-3 sm:pt-4 border-t border-cyan-400/25 gap-3 w-full">
+						<span class="text-xl sm:text-2xl font-black text-cyan-400 [text-shadow:0_0_12px_rgba(0,240,255,0.45)]">$15.000</span>
+						<button type="button" data-add-cart data-service="Limpieza Interna y Pasta Térmica" data-price="15000" class="w-full sm:w-auto px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#00f0ff]/70 bg-cyan-950/70 text-[#00f0ff] transition-all duration-200 hover:bg-[#00f0ff] hover:text-slate-950 hover:shadow-[0_0_18px_rgba(0,240,255,0.75)] cursor-pointer text-center">Agregar al Carrito</button>
+					</footer>
+				</article>
+
+				<!-- Tarjeta 3: Eliminación de Virus y Malware -->
+				<article class="price-card scroll-reveal is-visible flex flex-col justify-between gap-4 w-full max-w-full">
+					<header class="flex flex-col gap-3 w-full max-w-full">
+						<div class="flex items-center justify-between gap-2 w-full">
+							<div class="visual-zoom-box w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-950/70 shrink-0">
+								<svg class="neon-svg w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<path d="M24 6 L38 12 V23 C38 32.5 31.8 39.8 24 42 C16.2 39.8 10 32.5 10 23 V12 L24 6 Z" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+									<path d="M18 24 L22 28 L30 19" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="flex flex-col gap-1 text-left w-full min-w-0">
+							<h3 class="text-base sm:text-lg font-bold text-slate-100 leading-snug break-words">Eliminación de Virus y Malware</h3>
+							<p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Escaneo profundo, desinfección de amenazas y blindaje de seguridad activa.</p>
+						</div>
+					</header>
+					<footer class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between pt-3 sm:pt-4 border-t border-cyan-400/25 gap-3 w-full">
+						<span class="text-xl sm:text-2xl font-black text-cyan-400 [text-shadow:0_0_12px_rgba(0,240,255,0.45)]">$20.000</span>
+						<button type="button" data-add-cart data-service="Eliminación de Virus y Malware" data-price="20000" class="w-full sm:w-auto px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#00f0ff]/70 bg-cyan-950/70 text-[#00f0ff] transition-all duration-200 hover:bg-[#00f0ff] hover:text-slate-950 hover:shadow-[0_0_18px_rgba(0,240,255,0.75)] cursor-pointer text-center">Agregar al Carrito</button>
+					</footer>
+				</article>
+
+				<!-- Tarjeta 4: Diagnóstico General -->
+				<article class="price-card scroll-reveal is-visible flex flex-col justify-between gap-4 w-full max-w-full">
+					<header class="flex flex-col gap-3 w-full max-w-full">
+						<div class="flex items-center justify-between gap-2 w-full">
+							<div class="visual-zoom-box w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-950/70 shrink-0">
+								<svg class="neon-svg w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<rect x="8" y="10" width="32" height="28" rx="4" stroke="#00f0ff" stroke-width="2.2" />
+									<path d="M13 24 H18 L21 17 L26 31 L29 24 H35" stroke="#00f0ff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="flex flex-col gap-1 text-left w-full min-w-0">
+							<h3 class="text-base sm:text-lg font-bold text-slate-100 leading-snug break-words">Diagnóstico General</h3>
+							<p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Chequeo integral de hardware, discos, memorias y detección de fallas del sistema.</p>
+						</div>
+					</header>
+					<footer class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between pt-3 sm:pt-4 border-t border-cyan-400/25 gap-3 w-full">
+						<span class="text-xl sm:text-2xl font-black text-cyan-400 [text-shadow:0_0_12px_rgba(0,240,255,0.45)]">$10.000</span>
+						<button type="button" data-add-cart data-service="Diagnóstico General" data-price="10000" class="w-full sm:w-auto px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#00f0ff]/70 bg-cyan-950/70 text-[#00f0ff] transition-all duration-200 hover:bg-[#00f0ff] hover:text-slate-950 hover:shadow-[0_0_18px_rgba(0,240,255,0.75)] cursor-pointer text-center">Agregar al Carrito</button>
+					</footer>
+				</article>
+
+				<!-- Tarjeta 5: Armado de Computadores -->
+				<article class="price-card scroll-reveal is-visible flex flex-col justify-between gap-4 w-full max-w-full">
+					<header class="flex flex-col gap-3 w-full max-w-full">
+						<div class="flex items-center justify-between gap-2 w-full">
+							<div class="visual-zoom-box w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-950/70 shrink-0">
+								<svg class="neon-svg w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<rect x="14" y="6" width="20" height="36" rx="3" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+									<circle cx="24" cy="24" r="5" stroke="#8b5cf6" stroke-width="2.2" />
+									<circle cx="24" cy="35" r="2" fill="#00f0ff" />
+								</svg>
+							</div>
+						</div>
+						<div class="flex flex-col gap-1 text-left w-full min-w-0">
+							<h3 class="text-base sm:text-lg font-bold text-slate-100 leading-snug break-words">Armado de Computadores</h3>
+							<p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Ensamblaje profesional desde cero, gestión de cables, BIOS y pruebas de estrés.</p>
+						</div>
+					</header>
+					<footer class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between pt-3 sm:pt-4 border-t border-cyan-400/25 gap-3 w-full">
+						<span class="text-xl sm:text-2xl font-black text-cyan-400 [text-shadow:0_0_12px_rgba(0,240,255,0.45)]">$35.000</span>
+						<button type="button" data-add-cart data-service="Armado de Computadores" data-price="35000" class="w-full sm:w-auto px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#00f0ff]/70 bg-cyan-950/70 text-[#00f0ff] transition-all duration-200 hover:bg-[#00f0ff] hover:text-slate-950 hover:shadow-[0_0_18px_rgba(0,240,255,0.75)] cursor-pointer text-center">Agregar al Carrito</button>
+					</footer>
+				</article>
+
+				<!-- Tarjeta 6: Instalación de Componentes -->
+				<article class="price-card scroll-reveal is-visible flex flex-col justify-between gap-4 w-full max-w-full">
+					<header class="flex flex-col gap-3 w-full max-w-full">
+						<div class="flex items-center justify-between gap-2 w-full">
+							<div class="visual-zoom-box w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-950/70 shrink-0">
+								<svg class="neon-svg w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<rect x="12" y="12" width="24" height="24" rx="4" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.1)" />
+									<path d="M18 6 V12 M24 6 V12 M30 6 V12 M18 36 V42 M24 36 V42 M30 36 V42 M6 18 H12 M6 24 H12 M6 30 H12 M36 18 H42 M36 24 H42 M36 30 H42" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="flex flex-col gap-1 text-left w-full min-w-0">
+							<h3 class="text-base sm:text-lg font-bold text-slate-100 leading-snug break-words">Instalación de Componentes</h3>
+							<p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Montaje y configuración de memoria RAM, unidades SSD/NVMe, GPU o fuentes.</p>
+						</div>
+					</header>
+					<footer class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between pt-3 sm:pt-4 border-t border-cyan-400/25 gap-3 w-full">
+						<span class="text-xl sm:text-2xl font-black text-cyan-400 [text-shadow:0_0_12px_rgba(0,240,255,0.45)]">$12.000</span>
+						<button type="button" data-add-cart data-service="Instalación de Componentes" data-price="12000" class="w-full sm:w-auto px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg border border-[#00f0ff]/70 bg-cyan-950/70 text-[#00f0ff] transition-all duration-200 hover:bg-[#00f0ff] hover:text-slate-950 hover:shadow-[0_0_18px_rgba(0,240,255,0.75)] cursor-pointer text-center">Agregar al Carrito</button>
+					</footer>
+				</article>
+			</div>
+
+			<footer class="mt-8 sm:mt-10 pt-6 sm:pt-8 border-t border-cyan-400/40 text-center flex flex-col items-center w-full max-w-full">
+				<p class="text-base sm:text-lg font-bold mb-4">¿Necesitas un servicio que no está en la lista?</p>
+				<a href="#contacto" data-section="contacto" class="btn w-full sm:w-auto text-center">Contactar para Cotización Exacta</a>
+			</footer>
+		</article>
+	</section>
+
+	<!-- ============ VISTA SPA: CONTACTOS ============ -->
+	<section id="contacto" data-view="contacto" aria-label="Contacto Directo" class="spa-section hidden w-full max-w-full">
+		<section class="intro contact-section w-full max-w-full" id="zen-intro">
+			<div class="contact-container w-full max-w-5xl mx-auto">
+				<header role="banner" class="contact-header scroll-reveal is-visible">
+					<h1 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-tighter text-cyan-400 mb-2 [text-shadow:0_0_20px_rgba(0,240,255,0.6)] break-words">SEIJAKUTECH</h1>
+					<h2 class="text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest text-cyan-300">Contacto Directo</h2>
+				</header>
+
+				<article class="summary contact-summary scroll-reveal is-visible" id="zen-summary">
+					<p class="max-w-2xl mx-auto text-slate-200 text-xs sm:text-sm md:text-base">Ponte en contacto con nosotros para cotizar tu servicio técnico, hacer preguntas o coordinar una visita. ¡Estamos aquí para ayudarte a sacar el máximo provecho de tu equipo!</p>
+				</article>
+
+				<article class="preamble contact-preamble scroll-reveal is-visible w-full max-w-full" id="zen-preamble">
+					<nav aria-label="Canales de contacto directo" class="glass-panel-container w-full max-w-5xl mx-auto p-4 sm:p-6 md:p-8 rounded-xl border border-cyan-400/40">
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 w-full max-w-full">
+							<!-- 1. Teléfono / WhatsApp -->
+							<a href="tel:+56940280422" class="contact-item-link group flex flex-col items-center text-center sm:items-start sm:text-left gap-3 p-4 sm:p-5 rounded-xl bg-slate-950/60 border border-cyan-400/25 transition-all duration-300 hover:border-[#00f0ff] hover:bg-cyan-950/40 hover:shadow-[0_0_22px_rgba(0,240,255,0.35)] w-full max-w-full min-w-0">
+								<span class="w-11 h-11 rounded-lg bg-slate-900/90 border border-cyan-400/40 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:border-[#00f0ff] group-hover:shadow-[0_0_16px_rgba(0,240,255,0.65)] group-hover:scale-105">
+									<svg class="w-6 h-6 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(0,240,255,0.95)]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<rect x="6" y="2" width="12" height="20" rx="2.5" stroke="#00f0ff" stroke-width="2" fill="rgba(0,240,255,0.1)" />
+										<line x1="10" y1="5" x2="14" y2="5" stroke="#34d399" stroke-width="1.8" stroke-linecap="round" />
+										<circle cx="12" cy="18.5" r="1.2" fill="#00f0ff" />
+										<path d="M10.2 10.2c.4 1.2 1.4 2.2 2.6 2.6l.9-.9c.2-.2.5-.2.7-.1.7.3 1.4.4 2.1.4.4 0 .7.3.7.7v1.8c0 .4-.3.7-.7.7C11.8 15.4 8.6 12.2 8.6 8.3c0-.4.3-.7.7-.7h1.8c.4 0 .7.3.7.7 0 .7.1 1.4.4 2.1.1.2 0 .5-.1.7l-.9.9z" fill="#34d399" opacity="0.85" />
+									</svg>
+								</span>
+								<div class="flex flex-col w-full min-w-0 gap-1">
+									<span class="text-xs font-bold uppercase tracking-wider text-cyan-400 transition-all duration-300 group-hover:text-[#00f0ff] group-hover:[text-shadow:0_0_10px_rgba(0,240,255,0.75)]">Teléfono / WhatsApp</span>
+									<span class="text-sm sm:text-base font-semibold text-slate-100 tracking-wide transition-all duration-300 group-hover:text-[#00f0ff] group-hover:[text-shadow:0_0_12px_rgba(0,240,255,0.85)] break-words">+56 9 4028 0422</span>
+								</div>
+							</a>
+
+							<!-- 2. Correo Electrónico (Logo oficial de Gmail con la M característica) -->
+							<a href="https://mail.google.com/mail/?view=cm&fs=1&to=seijakutech@gmail.com&su=Consulta%20Servicio%20T%C3%A9cnico%20SEIJAKUTECH" target="_blank" rel="noopener noreferrer" class="contact-item-link group flex flex-col items-center text-center sm:items-start sm:text-left gap-3 p-4 sm:p-5 rounded-xl bg-slate-950/60 border border-cyan-400/25 transition-all duration-300 hover:border-[#00f0ff] hover:bg-cyan-950/40 hover:shadow-[0_0_22px_rgba(0,240,255,0.35)] w-full max-w-full min-w-0">
+								<span class="w-11 h-11 rounded-lg bg-slate-900/90 border border-cyan-400/40 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:border-[#00f0ff] group-hover:shadow-[0_0_16px_rgba(234,67,53,0.65)] group-hover:scale-105">
+									<svg class="w-6 h-6 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(234,67,53,0.9)]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<!-- Sobre / M oficial de Gmail -->
+										<rect x="2" y="4" width="20" height="16" rx="2.5" fill="rgba(15,23,42,0.9)" stroke="rgba(0,240,255,0.45)" stroke-width="1" />
+										<path d="M2 6.5V18c0 1.1.9 2 2 2h2V9.8l6 4.5 6-4.5V20h2c1.1 0 2-.9 2-2V6.5c0-1.8-2.1-2.8-3.5-1.7L12 10 5.5 4.8C4.1 3.7 2 4.7 2 6.5z" fill="#EA4335" />
+										<path d="M2 6.5V18c0 1.1.9 2 2 2h2V9.8L2 6.8V6.5z" fill="#4285F4" />
+										<path d="M22 6.5V18c0 1.1-.9 2-2 2h-2V9.8l4-3V6.5z" fill="#34A853" />
+										<path d="M6 9.8L12 14.3 18 9.8V4.8L12 9.3 6 4.8v5z" fill="#EA4335" />
+										<path d="M18 4.8v5l4-3V6.5c0-1.8-2.1-2.8-3.5-1.7L18 4.8z" fill="#FBBC05" />
+										<path d="M2 6.8l4 3V4.8l-.5-.1C4.1 3.7 2 4.7 2 6.5v.3z" fill="#C5221F" />
+									</svg>
+								</span>
+								<div class="flex flex-col w-full min-w-0 gap-1">
+									<span class="text-xs font-bold uppercase tracking-wider text-cyan-400 transition-all duration-300 group-hover:text-[#00f0ff] group-hover:[text-shadow:0_0_10px_rgba(0,240,255,0.75)]">Gmail Directo</span>
+									<span class="text-sm sm:text-base font-semibold text-slate-100 tracking-wide transition-all duration-300 group-hover:text-[#00f0ff] group-hover:[text-shadow:0_0_12px_rgba(0,240,255,0.85)] break-all">seijakutech@gmail.com</span>
+								</div>
+							</a>
+
+							<!-- 3. Instagram (Logo oficial de la cámara de Instagram) -->
+							<a href="https://instagram.com/seijakutech_79" target="_blank" rel="noopener noreferrer" class="contact-item-link md:col-span-2 lg:col-span-1 group flex flex-col items-center text-center sm:items-start sm:text-left gap-3 p-4 sm:p-5 rounded-xl bg-slate-950/60 border border-cyan-400/25 transition-all duration-300 hover:border-[#00f0ff] hover:bg-cyan-950/40 hover:shadow-[0_0_22px_rgba(0,240,255,0.35)] w-full max-w-full min-w-0">
+								<span class="w-11 h-11 rounded-lg bg-slate-900/90 border border-cyan-400/40 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:border-[#00f0ff] group-hover:shadow-[0_0_16px_rgba(225,48,108,0.7)] group-hover:scale-105">
+									<svg class="w-6 h-6 transition-all duration-300 group-hover:drop-shadow-[0_0_10px_rgba(225,48,108,0.95)]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<defs>
+											<linearGradient id="igNeonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+												<stop offset="0%" stop-color="#f09433" />
+												<stop offset="25%" stop-color="#e6683c" />
+												<stop offset="50%" stop-color="#dc2743" />
+												<stop offset="75%" stop-color="#cc2366" />
+												<stop offset="100%" stop-color="#bc1888" />
+											</linearGradient>
+										</defs>
+										<rect x="2.5" y="2.5" width="19" height="19" rx="5.5" stroke="url(#igNeonGrad)" stroke-width="2.2" fill="rgba(220,39,67,0.1)" />
+										<circle cx="12" cy="12" r="4.3" stroke="url(#igNeonGrad)" stroke-width="2.2" />
+										<circle cx="17.5" cy="6.5" r="1.3" fill="#00f0ff" />
+									</svg>
+								</span>
+								<div class="flex flex-col w-full min-w-0 gap-1">
+									<span class="text-xs font-bold uppercase tracking-wider text-cyan-400 transition-all duration-300 group-hover:text-[#00f0ff] group-hover:[text-shadow:0_0_10px_rgba(0,240,255,0.75)]">Instagram Oficial</span>
+									<span class="text-sm sm:text-base font-semibold text-slate-100 tracking-wide transition-all duration-300 group-hover:text-[#00f0ff] group-hover:[text-shadow:0_0_12px_rgba(0,240,255,0.85)] break-all">@seijakutech_79</span>
+								</div>
+							</a>
+						</div>
+					</nav>
+				</article>
+			</div>
+		</section>
+	</section>
+
+	<!-- ============ VISTA SPA: MI CUENTA / ESTADO DE EQUIPO ============ -->
+	<section id="login" data-view="login" aria-label="Mi Cuenta y Estado de Equipo" class="spa-section hidden w-full max-w-full pt-28 sm:pt-24 lg:pt-20">
+		<article class="w-full max-w-5xl mx-auto glass-panel-container p-4 sm:p-6 md:p-8 lg:p-10 mb-10 sm:mb-16 scroll-reveal is-visible">
+			<header class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pb-5 sm:pb-6 mb-6 sm:mb-8 border-b border-cyan-400/30 w-full max-w-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4 w-full lg:w-auto min-w-0">
+					<div class="visual-zoom-box w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl border border-cyan-400/40 bg-slate-900/60 shrink-0">
+						<svg class="neon-svg w-8 h-8 sm:w-10 sm:h-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+							<circle cx="24" cy="16" r="8" stroke="#00f0ff" stroke-width="2.2" fill="rgba(0,240,255,0.08)" />
+							<path d="M10 40 C10 31.5 16.2 27 24 27 C31.8 27 38 31.5 38 40" stroke="#8b5cf6" stroke-width="2.4" stroke-linecap="round" />
+						</svg>
+					</div>
+					<div class="min-w-0 w-full">
+						<h1 class="text-xl sm:text-2xl lg:text-3xl font-black text-cyan-400 mb-1 uppercase tracking-tighter m-0 bg-transparent shadow-none [text-shadow:0_0_20px_rgba(0,240,255,0.65)] break-words">Mi Cuenta / Estado de Equipo</h1>
+						<p class="text-xs sm:text-sm text-slate-300">Panel de seguimiento técnico sincronizado con <span class="text-[#00f0ff] font-bold">MariaDB 11.4</span></p>
+					</div>
+				</div>
+				<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl sm:rounded-full bg-cyan-950/70 border border-[#00f0ff]/60 shadow-[0_0_15px_rgba(0,240,255,0.28)] max-w-full self-center sm:self-start lg:self-auto">
+					<span class="relative flex h-2.5 w-2.5 shrink-0">
+						<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f0ff] opacity-75"></span>
+						<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#00f0ff] shadow-[0_0_8px_#00f0ff]"></span>
+					</span>
+					<span class="text-[10px] sm:text-xs font-bold tracking-wider uppercase text-cyan-300 break-words">Motor de Base de Datos: MariaDB 11.4 Conectado</span>
+				</div>
+			</header>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 w-full max-w-full">
+				<!-- Tarjeta de Perfil Activo -->
+				<article class="cyber-card flex flex-col justify-between gap-4 w-full max-w-full">
+					<div class="w-full min-w-0">
+						<h2 class="text-base sm:text-lg font-black uppercase tracking-wider text-[#00f0ff] mb-3 break-words">Perfil de Sesión Activa</h2>
+
+						<!-- Foto de perfil del usuario con opción de subir/editar cuando la sesión está activa -->
+						<div class="flex flex-col sm:flex-row items-center gap-3.5 p-3 rounded-xl bg-slate-950/75 border border-cyan-400/35 mb-3.5 w-full">
+							<div class="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-[#00f0ff] bg-slate-900 overflow-hidden flex items-center justify-center shrink-0 shadow-[0_0_16px_rgba(0,240,255,0.4)]">
+								<img id="account-profile-avatar" src="" alt="Foto de perfil guardada" class="hidden w-full h-full object-cover" />
+								<svg id="account-profile-placeholder" class="w-9 h-9 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+									<circle cx="12" cy="7" r="4"></circle>
+								</svg>
+							</div>
+							<div class="flex flex-col items-center sm:items-start gap-1.5 min-w-0 w-full">
+								<label id="account-photo-upload-label" for="account-photo-input" class="hidden items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#00f0ff]/70 bg-cyan-950/80 text-[#00f0ff] text-xs font-bold uppercase tracking-wider hover:bg-[#00f0ff] hover:text-slate-950 transition-all cursor-pointer">
+									<svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+										<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+										<circle cx="12" cy="13" r="4"></circle>
+									</svg>
+									<span>Subir / Editar Foto de Perfil</span>
+								</label>
+								<input type="file" id="account-photo-input" accept="image/*" class="hidden" />
+								<span id="account-photo-hint" class="text-[11px] text-slate-400">Inicia sesión con tu cuenta @gmail.com para subir o editar tu foto de perfil.</span>
+							</div>
+						</div>
+
+						<!-- Correo bloqueado (readonly + disabled) mientras la sesión está activa -->
+						<div class="flex flex-col gap-1 mb-3 w-full">
+							<div class="flex flex-wrap items-center justify-between gap-1">
+								<label for="account-locked-email" class="text-xs font-bold uppercase tracking-wider text-cyan-300">Cuenta Vinculada</label>
+								<span id="account-email-lock-pill" class="text-[10px] font-bold uppercase text-amber-300 bg-amber-950/60 border border-amber-400/40 px-2 py-0.5 rounded-full">🔒 Bloqueado en Sesión</span>
+							</div>
+							<input
+								type="text"
+								id="account-locked-email"
+								readonly
+								disabled
+								value="Sin sesión activa"
+								aria-readonly="true"
+								class="w-full max-w-full py-1.5 px-3 text-xs sm:text-sm rounded-lg bg-slate-900/95 border border-cyan-400/35 text-slate-300 font-mono opacity-80 cursor-not-allowed"
+							/>
+						</div>
+
+						<div class="flex flex-col gap-2 text-xs sm:text-sm text-slate-200 break-words">
+							<p><span class="text-slate-400">Estado:</span> <span id="account-status-badge" class="font-bold text-cyan-300">Modo Invitado / Sin autenticar</span></p>
+							<p><span class="text-slate-400">Usuario:</span> <span id="account-username" class="font-bold text-white">Invitado</span></p>
+							<p><span class="text-slate-400">Rol en MariaDB:</span> <span id="account-role" class="font-bold text-violet-300">invitado</span></p>
+							<p><span class="text-slate-400">Correo de Bienvenida:</span> <span id="account-welcome-status" class="font-bold text-emerald-300">Pendiente de primer registro</span></p>
+							<p><span class="text-slate-400">Tabla de origen:</span> <code class="text-xs text-cyan-300 break-all">seijakutech_db.usuarios</code></p>
+						</div>
+					</div>
+					<footer class="pt-4 border-t border-cyan-400/20 flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3 w-full">
+						<button type="button" id="account-admin-users-btn" class="hidden px-4 py-2 rounded-lg border-2 border-emerald-400/80 bg-emerald-950/70 text-xs font-black uppercase text-emerald-200 hover:bg-emerald-500 hover:text-slate-950 transition-all w-full sm:w-auto text-center cursor-pointer">
+							👥 Personas Registradas
+						</button>
+						<button type="button" id="account-logout-btn" class="hidden px-4 py-2 rounded-lg border-2 border-red-400/80 bg-red-950/60 text-xs font-black uppercase text-red-200 hover:bg-red-500 hover:text-white transition-all w-full sm:w-auto text-center cursor-pointer">
+							Cerrar Sesión Explícitamente
+						</button>
+						<a href="#inicio" data-section="inicio" class="btn text-xs py-2 px-4 w-full sm:w-auto text-center">Ir a Inicio / Acceso</a>
+						<a href="#cotizacion" data-section="cotizacion" class="px-4 py-2 rounded-lg border border-cyan-400/50 text-xs font-bold uppercase text-cyan-300 hover:bg-cyan-400/20 transition-all w-full sm:w-auto text-center">Solicitar Nuevo Servicio</a>
+					</footer>
+				</article>
+
+				<!-- Tarjeta de Estado de Equipo en Taller -->
+				<aside aria-label="Estado de Equipo en Laboratorio" class="cyber-card flex flex-col justify-between gap-4 w-full max-w-full">
+					<div class="w-full min-w-0">
+						<h2 class="text-base sm:text-lg font-black uppercase tracking-wider text-[#00f0ff] mb-3 break-words">Estado de Equipo en Laboratorio</h2>
+						<div class="p-3 sm:p-3.5 rounded-xl bg-slate-950/80 border border-cyan-400/30 mb-3 w-full max-w-full">
+							<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-xs font-bold uppercase text-cyan-300 mb-2">
+								<span>Orden Técnica #ST-8842</span>
+								<span class="self-start sm:self-auto px-2 py-0.5 rounded-full bg-cyan-400/20 text-[#00f0ff] border border-[#00f0ff]/40">En Diagnóstico</span>
+							</div>
+							<p class="text-xs text-slate-300 mb-2">Mantenimiento preventivo, limpieza ultrasónica y optimización de sistema operativo.</p>
+							<div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+								<div class="w-3/4 h-full bg-[#00f0ff] shadow-[0_0_10px_#00f0ff]"></div>
+							</div>
+							<p class="text-[11px] text-slate-400 mt-1.5">Progreso estimado: 75% completado</p>
+						</div>
+					</div>
+					<footer class="text-xs text-slate-400">¿Tienes dudas sobre tu orden? Escríbenos desde la sección <a href="#contacto" data-section="contacto" class="text-[#00f0ff] underline">Contactos</a>.</footer>
+				</aside>
+			</div>
+		</article>
+	</section>
+
+	<!-- ============ VISTA SPA EXCLUSIVA ADMINISTRADOR: PERSONAS REGISTRADAS ============ -->
+	<section id="personas-registradas" data-view="personas-registradas" aria-label="Personas Registradas" class="spa-section hidden w-full max-w-full pt-28 sm:pt-24 lg:pt-20" aria-hidden="true">
+		<article class="w-full max-w-5xl mx-auto glass-panel-container p-4 sm:p-6 md:p-8 lg:p-10 mb-10 sm:mb-16 scroll-reveal is-visible">
+			<header class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 pb-5 sm:pb-6 mb-6 sm:mb-8 border-b border-emerald-400/35 w-full max-w-full">
+				<div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4 w-full lg:w-auto min-w-0">
+					<div class="visual-zoom-box w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl border border-emerald-400/60 bg-emerald-950/50 shrink-0 shadow-[0_0_18px_rgba(16,185,129,0.3)]">
+						<svg class="w-8 h-8 sm:w-9 sm:h-9 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+							<circle cx="9" cy="7" r="4"></circle>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+							<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+						</svg>
+					</div>
+					<div class="min-w-0 w-full">
+						<div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+							<h1 class="text-xl sm:text-2xl lg:text-3xl font-black text-emerald-400 uppercase tracking-tighter m-0 bg-transparent shadow-none [text-shadow:0_0_20px_rgba(16,185,129,0.55)] break-words">Personas Registradas</h1>
+							<span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400/60 text-[10px] font-black uppercase tracking-wider text-emerald-300">Solo Administrador</span>
+						</div>
+						<p class="text-xs sm:text-sm text-slate-300">Directorio en tiempo real conectado a la base de datos (Exclusivo para el usuario <span class="text-[#00f0ff] font-mono font-bold">administrador</span>)</p>
+					</div>
+				</div>
+
+				<div class="flex flex-wrap items-center gap-2.5 self-center sm:self-start lg:self-auto">
+					<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-400/60 shadow-[0_0_14px_rgba(16,185,129,0.28)]">
+						<span class="relative flex h-2.5 w-2.5 shrink-0">
+							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+							<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400 shadow-[0_0_8px_#34d399]"></span>
+						</span>
+						<span id="registered-users-count" class="text-[11px] font-black tracking-wider uppercase text-emerald-300">0 Personas Registradas</span>
+					</div>
+					<button type="button" id="refresh-registered-users-btn" class="px-3 py-1.5 rounded-lg border border-[#00f0ff]/60 bg-cyan-950/70 text-[#00f0ff] text-xs font-bold uppercase tracking-wider hover:bg-[#00f0ff] hover:text-slate-950 transition-all cursor-pointer">
+						↻ Actualizar en Tiempo Real
+					</button>
+				</div>
+			</header>
+
+			<!-- Aviso de eliminación permanente en Base de Datos -->
+			<aside id="admin-delete-feedback" role="status" aria-live="polite" class="hidden mb-5 p-3.5 rounded-xl border border-red-400/80 bg-red-950/85 text-xs sm:text-sm font-mono text-red-100 shadow-[0_0_20px_rgba(239,68,68,0.3)] w-full max-w-full"></aside>
+
+			<!-- Lista en tiempo real de todas las personas registradas en la base de datos -->
+			<section id="registered-users-list" aria-label="Lista de personas registradas" class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-full">
+				<p class="text-xs sm:text-sm text-slate-400 col-span-full text-center py-8">Cargando personas registradas desde la base de datos...</p>
+			</section>
+		</article>
+	</section>
+
+	</main>
+
+	<footer class="site-footer border-t border-cyan-400/20 mt-8 sm:mt-12 w-full max-w-full">
+		<p class="text-xs text-slate-400">&copy; SEIJAKUTECH - Servicio Técnico</p>
+	</footer>
+
+	<!-- ============ PANEL LATERAL (DRAWER) DEL CARRITO DE COMPRAS ============ -->
+	<div id="cart-drawer-overlay" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-[10000] hidden transition-opacity duration-300" aria-hidden="true"></div>
+	<aside id="cart-drawer" aria-label="Carrito de servicios técnicos" class="fixed top-0 right-0 h-full w-full max-w-full sm:max-w-md bg-[#070d24]/95 backdrop-blur-xl border-l-2 border-[#00f0ff] shadow-[-10px_0_35px_rgba(0,240,255,0.28)] z-[10001] hidden flex-col justify-between p-4 sm:p-6 text-slate-100">
+		<!-- Encabezado del Carrito -->
+		<header class="flex items-center justify-between gap-2 pb-4 border-b border-cyan-400/35 w-full max-w-full">
+			<div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+				<div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-cyan-950/80 border border-[#00f0ff]/60 flex items-center justify-center text-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.3)] shrink-0">
+					<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<circle cx="9" cy="21" r="1"></circle>
+						<circle cx="20" cy="21" r="1"></circle>
+						<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+					</svg>
+				</div>
+				<div class="min-w-0">
+					<h2 class="text-base sm:text-xl font-black uppercase tracking-wider text-[#00f0ff] [text-shadow:0_0_12px_rgba(0,240,255,0.5)] break-words">Carrito de Servicios</h2>
+					<p class="text-[11px] sm:text-xs text-slate-400">Cotización interactiva SEIJAKUTECH</p>
+				</div>
+			</div>
+			<button type="button" id="close-cart-btn" aria-label="Cerrar carrito" class="w-9 h-9 rounded-lg border border-cyan-400/40 bg-slate-900/80 text-cyan-300 flex items-center justify-center transition-all hover:bg-[#00f0ff] hover:text-slate-950 hover:shadow-[0_0_14px_#00f0ff] cursor-pointer shrink-0">
+				✕
+			</button>
+		</header>
+
+		<!-- Lista de servicios agregados -->
+		<section id="cart-items-list" aria-label="Servicios en el carrito" class="flex-1 overflow-y-auto my-4 pr-1 flex flex-col gap-3 w-full max-w-full">
+			<p class="text-xs sm:text-sm text-slate-400 text-center py-10">Tu carrito está vacío. Agrega servicios desde la sección Cotización.</p>
+		</section>
+
+		<!-- Contenedor de confirmación de compra -->
+		<aside id="cart-checkout-feedback" role="status" aria-live="polite" class="hidden mb-4 p-3 sm:p-4 rounded-xl border border-[#00f0ff] bg-cyan-950/85 text-xs font-mono text-cyan-200 shadow-[0_0_20px_rgba(0,240,255,0.3)] w-full max-w-full break-words"></aside>
+
+		<!-- Pie del Carrito: Total y Acciones -->
+		<footer class="pt-4 border-t border-cyan-400/35 flex flex-col gap-3 sm:gap-4 w-full max-w-full">
+			<div class="flex flex-wrap items-center justify-between gap-2 bg-slate-950/80 border border-cyan-400/40 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 w-full max-w-full">
+				<span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-slate-300">Total Estimado (CLP)</span>
+				<span id="cart-total-price" class="text-xl sm:text-2xl font-black text-[#00f0ff] [text-shadow:0_0_14px_rgba(0,240,255,0.6)]">$0</span>
+			</div>
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 w-full max-w-full">
+				<button type="button" id="clear-cart-btn" class="w-full px-4 py-2.5 sm:py-3 rounded-lg border-2 border-red-400/60 bg-red-950/40 text-red-300 font-bold uppercase text-xs tracking-wider transition-all hover:bg-red-500 hover:text-white hover:shadow-[0_0_16px_rgba(239,68,68,0.6)] cursor-pointer">
+					Vaciar Carrito
+				</button>
+				<button type="button" id="checkout-cart-btn" class="btn w-full text-xs py-2.5 sm:py-3 px-4 text-center cursor-pointer">
+					Finalizar Compra
+				</button>
+			</div>
+		</footer>
+	</aside>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			// Navegación Single Page Application (SPA) en Vanilla JavaScript
+			const sections = document.querySelectorAll(".spa-section");
+			const navTriggers = document.querySelectorAll("[data-section]");
+			const SUPER_ADMIN_USER = "administrador";
+			const SUPER_ADMIN_PASS = "Administrador.2004";
+			let currentAuthenticatedSession = null;
+
+			function isSuperAdminSessionActive() {
+				return Boolean(
+					currentAuthenticatedSession &&
+					!currentAuthenticatedSession.isGuest &&
+					String(currentAuthenticatedSession.correo || "").trim() === SUPER_ADMIN_USER &&
+					currentAuthenticatedSession.role === "administrador"
+				);
+			}
+
+			function showSection(sectionId) {
+				// Bloquear acceso a la vista "personas-registradas" si NO es la sesión del usuario "administrador"
+				if (sectionId === "personas-registradas" && !isSuperAdminSessionActive()) {
+					sectionId = "inicio";
+				}
+
+				sections.forEach(function (section) {
+					const viewName = section.getAttribute("data-view");
+					const isInicio = viewName === "inicio";
+
+					// Mantener "personas-registradas" 100% oculta para cualquier usuario normal
+					if (viewName === "personas-registradas" && !isSuperAdminSessionActive()) {
+						section.classList.add("hidden");
+						section.setAttribute("aria-hidden", "true");
+						return;
+					}
+
+					if (viewName === sectionId) {
+						section.classList.remove("hidden");
+						section.setAttribute("aria-hidden", "false");
+						if (isInicio) {
+							section.classList.add("min-h-[calc(100dvh-110px)]", "w-full", "max-w-full", "flex", "flex-col", "items-center", "justify-center");
+						}
+						section.querySelectorAll(".scroll-reveal").forEach(function (el) {
+							el.classList.add("is-visible");
+						});
+					} else {
+						section.classList.add("hidden");
+						if (isInicio) {
+							section.classList.remove("min-h-[calc(100dvh-110px)]", "flex", "flex-col", "items-center", "justify-center");
+						}
+					}
+				});
+
+				document.querySelectorAll(".nav-menu .nav-link[data-section]").forEach(function (link) {
+					if (link.getAttribute("data-section") === sectionId) {
+						link.classList.add("active");
+					} else {
+						link.classList.remove("active");
+					}
+				});
+
+				if (sectionId === "personas-registradas" && isSuperAdminSessionActive()) {
+					loadAndRenderRegisteredUsers();
+				}
+
+				window.scrollTo(0, 0);
+			}
+
+			navTriggers.forEach(function (trigger) {
+				trigger.addEventListener("click", function (event) {
+					event.preventDefault();
+					const targetSection = this.getAttribute("data-section");
+					if (targetSection) {
+						showSection(targetSection);
+					}
+				});
+			});
+
+			// ============ SISTEMA DE ACCESO, REGISTRO, INVITADO Y CIBERSEGURIDAD AVANZADA (MARIADB) ============
+			const loginForm = document.getElementById("login-form");
+			const registerForm = document.getElementById("register-form");
+			const tabBtnLogin = document.getElementById("tab-btn-login");
+			const tabBtnRegister = document.getElementById("tab-btn-register");
+			const guestAccessBtn = document.getElementById("guest-access-btn");
+			const loginResponseBox = document.getElementById("mariadb-login-response");
+			const navUserLabel = document.getElementById("nav-user-label");
+			const navUserDot = document.getElementById("nav-user-dot");
+			const navUserAvatar = document.getElementById("nav-user-avatar");
+			const navLogoutBtn = document.getElementById("nav-logout-btn");
+			const navItemPersonasRegistradas = document.getElementById("nav-item-personas-registradas");
+			const heroAdminUsersBtn = document.getElementById("hero-admin-users-btn");
+			const accountAdminUsersBtn = document.getElementById("account-admin-users-btn");
+			const registeredUsersListEl = document.getElementById("registered-users-list");
+			const registeredUsersCountEl = document.getElementById("registered-users-count");
+			const refreshRegisteredUsersBtn = document.getElementById("refresh-registered-users-btn");
+			const adminDeleteFeedbackEl = document.getElementById("admin-delete-feedback");
+
+			const accountStatusBadge = document.getElementById("account-status-badge");
+			const accountUsername = document.getElementById("account-username");
+			const accountRole = document.getElementById("account-role");
+			const accountWelcomeStatus = document.getElementById("account-welcome-status");
+			const accountLockedEmail = document.getElementById("account-locked-email");
+			const accountProfileAvatar = document.getElementById("account-profile-avatar");
+			const accountProfilePlaceholder = document.getElementById("account-profile-placeholder");
+			const accountPhotoUploadLabel = document.getElementById("account-photo-upload-label");
+			const accountPhotoInput = document.getElementById("account-photo-input");
+			const accountPhotoHint = document.getElementById("account-photo-hint");
+			const accountLogoutBtn = document.getElementById("account-logout-btn");
+
+			const activeSessionHeroPanel = document.getElementById("active-session-hero-panel");
+			const heroProfileAvatar = document.getElementById("hero-profile-avatar");
+			const heroProfilePlaceholder = document.getElementById("hero-profile-placeholder");
+			const heroSessionName = document.getElementById("hero-session-name");
+			const heroPhotoInput = document.getElementById("hero-photo-input");
+			const heroPhotoFeedback = document.getElementById("hero-photo-feedback");
+			const heroLockedEmail = document.getElementById("hero-locked-email");
+			const heroLogoutBtn = document.getElementById("hero-logout-btn");
+			const loginEmailLockBadge = document.getElementById("login-email-lock-badge");
+			const loginGmailHint = document.getElementById("login-gmail-hint");
+			const registerGmailHint = document.getElementById("register-gmail-hint");
+			const registerPhotoInput = document.getElementById("register-photo-input");
+			const registerPhotoPreview = document.getElementById("register-photo-preview");
+			const registerPhotoPlaceholder = document.getElementById("register-photo-placeholder");
+			const registerPhotoName = document.getElementById("register-photo-name");
+			const welcomeEmailBanner = document.getElementById("welcome-email-banner");
+			const welcomeEmailDetails = document.getElementById("welcome-email-details");
+			const welcomeEmailGmailLink = document.getElementById("welcome-email-gmail-link");
+
+			const bruteForceBanner = document.getElementById("brute-force-lock-banner");
+			const bruteForceTimerEl = document.getElementById("brute-force-timer");
+			const SESSION_STORAGE_KEY = "seijakutech_session";
+			const USERS_VAULT_KEY = "seijakutech_users_vault";
+			const BRUTE_FORCE_KEY = "seijakutech_brute_force";
+			const MAX_FAILED_ATTEMPTS = 3;
+			const LOCKOUT_SECONDS = 30;
+			let bruteForceInterval = null;
+			let pendingRegisterPhotoDataUrl = null;
+			let adminRealtimePollingInterval = null;
+
+			// 1. Sanitización de inputs contra ataques XSS (escapando <, >, ', ", &)
+			function sanitizeXSS(raw) {
+				return String(raw || "")
+					.replace(/&/g, "&amp;")
+					.replace(/</g, "&lt;")
+					.replace(/>/g, "&gt;")
+					.replace(/"/g, "&quot;")
+					.replace(/'/g, "&#39;");
+			}
+
+			// Regla Estricta: Validar correos que terminen estrictamente en @gmail.com
+			function isStrictGmail(email) {
+				const clean = String(email || "").trim().toLowerCase();
+				return /^[a-z0-9._%+-]+@gmail\.com$/.test(clean);
+			}
+
+			// Validar si una cuenta de sesión es válida (excepción "administrador" o correo @gmail.com)
+			function isValidSessionAccount(identifier) {
+				const raw = String(identifier || "").trim();
+				return raw === SUPER_ADMIN_USER || isStrictGmail(raw);
+			}
+
+			// Detección de patrones de Inyección SQL (SQLi) o scripts XSS maliciosos
+			function hasMaliciousPayload(raw) {
+				const value = String(raw || "");
+				return /(<script|javascript:|onerror=|onload=|--|;\s*drop\s+table|\bunion\s+select\b|'\s*or\s+'?1'?\s*=\s*'?1)/i.test(value);
+			}
+
+			// Sanitización en tiempo real y validación visual @gmail.com (con excepción exclusiva para "administrador" en login)
+			["login-usuario", "register-nombre", "register-correo", "register-usuario"].forEach(function (fieldId) {
+				const inputEl = document.getElementById(fieldId);
+				if (inputEl) {
+					inputEl.addEventListener("blur", function () {
+						if (!this.readOnly && !this.disabled) {
+							this.value = this.value.replace(/[<>'"]/g, "").trim();
+						}
+					});
+				}
+			});
+
+			function bindGmailRealtimeValidation(inputId, hintEl) {
+				const inputEl = document.getElementById(inputId);
+				if (!inputEl || !hintEl) return;
+				const isLoginField = inputId === "login-usuario";
+				function updateHint() {
+					if (inputEl.readOnly || inputEl.disabled) return;
+					const val = inputEl.value.trim();
+					if (!val) {
+						hintEl.className = "text-[10px] font-medium text-slate-400 leading-tight";
+						hintEl.innerHTML = 'Requisito estricto: correos terminados en <strong class="text-cyan-300">@gmail.com</strong>';
+						return;
+					}
+					if (isLoginField && val === SUPER_ADMIN_USER) {
+						hintEl.className = "text-[10px] font-bold text-emerald-300 leading-tight";
+						hintEl.textContent = "✓ Acceso exclusivo de Administrador reconocido (sin @gmail.com)";
+						return;
+					}
+					if (isStrictGmail(val)) {
+						hintEl.className = "text-[10px] font-bold text-emerald-300 leading-tight";
+						hintEl.textContent = "✓ Correo @gmail.com válido";
+					} else {
+						hintEl.className = "text-[10px] font-bold text-red-400 leading-tight";
+						hintEl.textContent = "⚠ Formato inválido: todos los usuarios normales deben usar un correo terminado en @gmail.com";
+					}
+				}
+				inputEl.addEventListener("input", updateHint);
+				inputEl.addEventListener("blur", updateHint);
+			}
+
+			bindGmailRealtimeValidation("login-usuario", loginGmailHint);
+			bindGmailRealtimeValidation("register-correo", registerGmailHint);
+
+			// 2. Evaluación en tiempo real de fortaleza de contraseña
+			function evaluatePasswordStrength(password) {
+				const pwd = String(password || "");
+				const hasLength = pwd.length >= 8;
+				const hasUpper = /[A-Z]/.test(pwd);
+				const hasNumber = /[0-9]/.test(pwd);
+				const hasSymbol = /[^A-Za-z0-9]/.test(pwd);
+				const score = [hasLength, hasUpper, hasNumber, hasSymbol].filter(Boolean).length;
+
+				if (pwd.length === 0) {
+					return { score: 0, level: "—", widthClass: "w-0", colorClass: "bg-slate-700", textClass: "text-slate-400", isStrong: false };
+				}
+				if (score <= 2 || !hasLength) {
+					return { score: score, level: "Básica", widthClass: "w-1/3", colorClass: "bg-red-500 shadow-[0_0_8px_#ef4444]", textClass: "text-red-400", isStrong: false };
+				}
+				if (score === 3) {
+					return { score: score, level: "Media", widthClass: "w-2/3", colorClass: "bg-amber-400 shadow-[0_0_8px_#fbbf24]", textClass: "text-amber-300", isStrong: false };
+				}
+				return { score: 4, level: "Fuerte", widthClass: "w-full", colorClass: "bg-emerald-400 shadow-[0_0_10px_#34d399]", textClass: "text-emerald-300", isStrong: true };
+			}
+
+			function bindPasswordStrengthMeter(inputId, barId, textId) {
+				const inputEl = document.getElementById(inputId);
+				const barEl = document.getElementById(barId);
+				const textEl = document.getElementById(textId);
+				if (!inputEl || !barEl || !textEl) return;
+
+				inputEl.addEventListener("input", function () {
+					const result = evaluatePasswordStrength(this.value);
+					barEl.className = "h-full transition-all duration-300 rounded-full " + result.widthClass + " " + result.colorClass;
+					textEl.className = "text-[10px] font-bold uppercase tracking-wider " + result.textClass;
+					textEl.textContent = "Nivel: " + result.level;
+				});
+			}
+
+			bindPasswordStrengthMeter("login-password", "login-pwd-strength-bar", "login-pwd-strength-text");
+			bindPasswordStrengthMeter("register-password", "register-pwd-strength-bar", "register-pwd-strength-text");
+
+			// 3. Botón de ojo para mostrar/ocultar contraseña
+			document.querySelectorAll("[data-toggle-pwd]").forEach(function (btn) {
+				btn.addEventListener("click", function () {
+					const targetId = this.getAttribute("data-toggle-pwd");
+					const inputEl = targetId ? document.getElementById(targetId) : null;
+					if (!inputEl) return;
+					const isHidden = inputEl.type === "password";
+					inputEl.type = isHidden ? "text" : "password";
+					const eyeOpen = this.querySelector(".eye-open");
+					const eyeClosed = this.querySelector(".eye-closed");
+					if (eyeOpen && eyeClosed) {
+						eyeOpen.classList.toggle("hidden", isHidden);
+						eyeClosed.classList.toggle("hidden", !isHidden);
+					}
+				});
+			});
+
+			// 4. Web Crypto API (SHA-256) para encriptar datos en localStorage sin guardar texto plano
+			async function sha256WebCrypto(message) {
+				const msgBuffer = new TextEncoder().encode(String(message || ""));
+				if (window.crypto && window.crypto.subtle) {
+					const hashBuffer = await window.crypto.subtle.digest("SHA-256", msgBuffer);
+					const hashArray = Array.from(new Uint8Array(hashBuffer));
+					return hashArray.map(function (b) { return b.toString(16).padStart(2, "0"); }).join("");
+				}
+				return btoa(encodeURIComponent(String(message || "")));
+			}
+
+			// Procesar y comprimir imagen de perfil a DataURL ligero para guardado persistente en BD y localStorage
+			function processImageFileToDataURL(file) {
+				return new Promise(function (resolve, reject) {
+					if (!file || !file.type.startsWith("image/")) {
+						reject(new Error("Selecciona un archivo de imagen válido."));
+						return;
+					}
+					const reader = new FileReader();
+					reader.onerror = function () {
+						reject(new Error("No se pudo leer la imagen."));
+					};
+					reader.onload = function (evt) {
+						const img = new Image();
+						img.onerror = function () {
+							reject(new Error("Imagen inválida."));
+						};
+						img.onload = function () {
+							const maxDim = 260;
+							let w = img.width;
+							let h = img.height;
+							if (w > h && w > maxDim) {
+								h = Math.round((h * maxDim) / w);
+								w = maxDim;
+							} else if (h >= w && h > maxDim) {
+								w = Math.round((w * maxDim) / h);
+								h = maxDim;
+							}
+							const canvas = document.createElement("canvas");
+							canvas.width = w;
+							canvas.height = h;
+							const ctx = canvas.getContext("2d");
+							ctx.drawImage(img, 0, 0, w, h);
+							resolve(canvas.toDataURL("image/jpeg", 0.85));
+						};
+						img.src = evt.target.result;
+					};
+					reader.readAsDataURL(file);
+				});
+			}
+
+			// Gestión de la bóveda persistente de usuarios en localStorage (sincronizada con la BD del servidor)
+			function getUsersVault() {
+				try {
+					return JSON.parse(localStorage.getItem(USERS_VAULT_KEY) || "{}");
+				} catch (e) {
+					return {};
+				}
+			}
+
+			function saveUsersVault(vault) {
+				try {
+					localStorage.setItem(USERS_VAULT_KEY, JSON.stringify(vault));
+				} catch (e) {
+					// Ignorar errores de cuota
+				}
+			}
+
+			// Asegurar únicamente el acceso directo del Administrador exclusivo ("administrador" / "Administrador.2004")
+			(async function seedExclusiveAdminInVault() {
+				const vault = getUsersVault();
+				if (vault["seijakutech@gmail.com"] && vault["seijakutech@gmail.com"].usuario === "admin") {
+					delete vault["seijakutech@gmail.com"];
+				}
+				if (vault["simonadministrador@gmail.com"] && vault["simonadministrador@gmail.com"].rol === "administrador") {
+					delete vault["simonadministrador@gmail.com"];
+				}
+				const adminHash = await sha256WebCrypto(SUPER_ADMIN_PASS);
+				if (!vault[SUPER_ADMIN_USER]) {
+					vault[SUPER_ADMIN_USER] = {
+						nombre: "Administrador SEIJAKUTECH",
+						correo: SUPER_ADMIN_USER,
+						usuario: SUPER_ADMIN_USER,
+						passwordHash: adminHash,
+						fotoPerfil: null,
+						rol: "administrador",
+						welcomeEmailSent: true,
+						fechaRegistro: new Date().toISOString()
+					};
+				} else {
+					vault[SUPER_ADMIN_USER].passwordHash = adminHash;
+					vault[SUPER_ADMIN_USER].rol = "administrador";
+				}
+				saveUsersVault(vault);
+			})();
+
+			// Formatear fecha de registro de forma clara y legible
+			function formatRegistrationDate(isoString) {
+				if (!isoString) return "Fecha registrada en BD";
+				const dateObj = new Date(isoString);
+				if (Number.isNaN(dateObj.getTime())) return String(isoString);
+				return dateObj.toLocaleString("es-CL", {
+					day: "2-digit",
+					month: "2-digit",
+					year: "numeric",
+					hour: "2-digit",
+					minute: "2-digit",
+					second: "2-digit"
+				});
+			}
+
+			// Regla 2 y 3: Cargar y mostrar en tiempo real la lista de personas registradas con botón "Eliminar" (exclusivo para el usuario "administrador")
+			async function loadAndRenderRegisteredUsers() {
+				if (!registeredUsersListEl) return;
+
+				if (!isSuperAdminSessionActive()) {
+					registeredUsersListEl.innerHTML = "";
+					return;
+				}
+
+				const mergedUsersMap = new Map();
+				const localVault = getUsersVault();
+				let loadedFromServer = false;
+
+				// 1. Consultar en tiempo real la base de datos del servidor (/api/admin/users)
+				try {
+					const res = await fetch("/api/admin/users?admin=" + encodeURIComponent(SUPER_ADMIN_USER));
+					const ct = res.headers.get("content-type") || "";
+					if (res.ok && ct.includes("application/json")) {
+						const data = await res.json();
+						if (data && data.ok && Array.isArray(data.users)) {
+							loadedFromServer = true;
+							const serverEmails = new Set();
+							data.users.forEach(function (srvUser) {
+								const key = String(srvUser.correo || "").toLowerCase();
+								if (!isStrictGmail(key) || key === SUPER_ADMIN_USER) return;
+								serverEmails.add(key);
+								const localEntry = localVault[key];
+								mergedUsersMap.set(key, {
+									nombre: srvUser.nombre || (localEntry && localEntry.nombre) || key.split("@")[0],
+									correo: key,
+									usuario: srvUser.usuario || (localEntry && localEntry.usuario) || key.split("@")[0],
+									rol: srvUser.rol || (localEntry && localEntry.rol) || "cliente",
+									fotoPerfil: srvUser.fotoPerfil || (localEntry && localEntry.fotoPerfil) || null,
+									fechaRegistro: srvUser.fechaRegistro || (localEntry && localEntry.fechaRegistro) || new Date().toISOString()
+								});
+							});
+
+							// Sincronizar bóveda local eliminando cuentas que ya fueron borradas de la base de datos del servidor
+							let vaultChanged = false;
+							Object.keys(localVault).forEach(function (vKey) {
+								if (vKey !== SUPER_ADMIN_USER && isStrictGmail(vKey) && !serverEmails.has(vKey.toLowerCase())) {
+									delete localVault[vKey];
+									vaultChanged = true;
+								}
+							});
+							if (vaultChanged) {
+								saveUsersVault(localVault);
+							}
+						}
+					}
+				} catch (_) {
+					// Respaldo en modo estático desde bóveda local
+				}
+
+				// 2. Si el servidor no respondió (modo estático), leer de la bóveda local
+				if (!loadedFromServer) {
+					Object.keys(localVault).forEach(function (key) {
+						const u = localVault[key];
+						if (u && u.correo && u.correo !== SUPER_ADMIN_USER && isStrictGmail(u.correo)) {
+							mergedUsersMap.set(u.correo.toLowerCase(), {
+								nombre: u.nombre || u.usuario || u.correo.split("@")[0],
+								correo: u.correo.toLowerCase(),
+								usuario: u.usuario || u.correo.split("@")[0],
+								rol: u.rol || "cliente",
+								fotoPerfil: u.fotoPerfil || null,
+								fechaRegistro: u.fechaRegistro || new Date().toISOString()
+							});
+						}
+					});
+				}
+
+				const allUsers = Array.from(mergedUsersMap.values()).sort(function (a, b) {
+					return new Date(b.fechaRegistro).getTime() - new Date(a.fechaRegistro).getTime();
+				});
+
+				if (registeredUsersCountEl) {
+					registeredUsersCountEl.textContent =
+						allUsers.length + (allUsers.length === 1 ? " Persona Registrada" : " Personas Registradas");
+				}
+
+				if (allUsers.length === 0) {
+					registeredUsersListEl.innerHTML =
+						'<p class="text-xs sm:text-sm text-slate-400 col-span-full text-center py-8">No hay personas registradas actualmente en la base de datos.</p>';
+					return;
+				}
+
+				registeredUsersListEl.innerHTML = allUsers
+					.map(function (person) {
+						const safeCorreo = sanitizeXSS(person.correo);
+						const safeNombre = sanitizeXSS(person.nombre);
+						const safeRol = sanitizeXSS(person.rol);
+						const safeFecha = sanitizeXSS(formatRegistrationDate(person.fechaRegistro));
+						const hasAvatar = Boolean(person.fotoPerfil && String(person.fotoPerfil).startsWith("data:image/"));
+
+						const avatarHtml = hasAvatar
+							? '<img src="' + person.fotoPerfil + '" alt="Foto de ' + safeCorreo + '" class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-[#00f0ff] shadow-[0_0_12px_rgba(0,240,255,0.45)] shrink-0" />'
+							: '<div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-cyan-400/50 bg-slate-900 flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(0,240,255,0.2)]">' +
+							  '<svg class="w-7 h-7 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">' +
+							  '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>' +
+							  "</svg></div>";
+
+						const roleBadge =
+							'<span class="px-2 py-0.5 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-[10px] font-bold uppercase text-cyan-300">' + safeRol + "</span>";
+
+						return (
+							'<article class="cyber-card flex flex-col sm:flex-row items-center justify-between gap-3.5 p-4 rounded-xl bg-slate-950/85 border border-cyan-400/35 hover:border-[#00f0ff] transition-all w-full max-w-full" data-user-card="' + safeCorreo + '">' +
+							'<div class="flex flex-col sm:flex-row items-center sm:items-start gap-3.5 min-w-0 flex-1 w-full">' +
+							avatarHtml +
+							'<div class="flex flex-col gap-1.5 min-w-0 flex-1 text-center sm:text-left w-full">' +
+							'<div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">' +
+							'<span class="text-sm sm:text-base font-black text-white break-words">' + safeNombre + "</span>" +
+							roleBadge +
+							"</div>" +
+							'<div class="text-xs sm:text-sm font-mono font-bold text-[#00f0ff] break-all">' + safeCorreo + "</div>" +
+							'<div class="text-[11px] text-slate-400 flex flex-wrap items-center justify-center sm:justify-start gap-1">' +
+							'<span class="text-slate-500 font-semibold uppercase">Fecha de registro:</span> ' +
+							'<span class="text-slate-200 font-mono">' + safeFecha + "</span>" +
+							"</div>" +
+							"</div>" +
+							"</div>" +
+							'<div class="shrink-0 w-full sm:w-auto flex justify-center sm:justify-end pt-2 sm:pt-0 border-t sm:border-t-0 border-cyan-400/15">' +
+							'<button type="button" data-delete-user-email="' + safeCorreo + '" class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg border-2 border-red-400/80 bg-red-950/70 text-red-200 text-xs font-black uppercase tracking-wider hover:bg-red-500 hover:text-white hover:shadow-[0_0_16px_rgba(239,68,68,0.75)] transition-all cursor-pointer w-full sm:w-auto">' +
+							'<svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+							'<polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path>' +
+							"</svg>" +
+							"<span>Eliminar</span>" +
+							"</button>" +
+							"</div>" +
+							"</article>"
+						);
+					})
+					.join("");
+			}
+
+			// Regla 3: Borrado real y permanente en Base de Datos desde el panel "Personas Registradas"
+			async function deleteRegisteredUserPermanently(targetEmail) {
+				if (!isSuperAdminSessionActive()) return;
+				const correoKey = String(targetEmail || "").trim().toLowerCase();
+				if (!correoKey || correoKey === SUPER_ADMIN_USER) return;
+
+				// 1. Eliminar permanentemente de la bóveda local
+				const vault = getUsersVault();
+				delete vault[correoKey];
+				saveUsersVault(vault);
+
+				// 2. Eliminar permanentemente en la base de datos del servidor (data/users-db.json + MariaDB)
+				try {
+					await fetch(
+						"/api/admin/users?admin=" + encodeURIComponent(SUPER_ADMIN_USER) + "&correo=" + encodeURIComponent(correoKey),
+						{
+							method: "DELETE",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify({ admin: SUPER_ADMIN_USER, correo: correoKey })
+						}
+					);
+				} catch (_) {
+					// Respaldo POST por compatibilidad
+					try {
+						await fetch("/api/admin/users/delete", {
+							method: "POST",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify({ admin: SUPER_ADMIN_USER, correo: correoKey })
+						});
+					} catch (_e) {
+						// Eliminado en bóveda local
+					}
+				}
+
+				// 3. Mostrar confirmación de borrado permanente en el panel de Administrador y en el log de MariaDB
+				if (adminDeleteFeedbackEl) {
+					adminDeleteFeedbackEl.classList.remove("hidden");
+					adminDeleteFeedbackEl.innerHTML =
+						'<div class="font-black uppercase tracking-wider text-red-300 mb-0.5">🗑 Usuario Eliminado Permanentemente de la Base de Datos</div>' +
+						'<div class="text-[11px] text-slate-300 mb-0.5">DELETE FROM seijakutech_db.usuarios WHERE correo = \'' + sanitizeXSS(correoKey) + '\'</div>' +
+						'<div class="font-semibold text-red-100">La cuenta <strong class="text-white">' + sanitizeXSS(correoKey) + '</strong> fue borrada por completo. Si intenta volver a iniciar sesión con su correo y contraseña antiguos, el acceso será rechazado y deberá registrarse de nuevo desde cero.</div>';
+				}
+
+				renderMariaDBMessage(
+					true,
+					"[MariaDB 11.4 - Borrado Permanente Ejecutado]",
+					"DELETE FROM usuarios WHERE correo = '" + correoKey + "' -> 1 row deleted permanently",
+					"El usuario '" + correoKey + "' ha sido eliminado de la base de datos. Deberá registrarse de nuevo desde cero si desea volver a ingresar."
+				);
+
+				// 4. Actualizar lista en tiempo real inmediatamente
+				await loadAndRenderRegisteredUsers();
+			}
+
+			if (registeredUsersListEl) {
+				registeredUsersListEl.addEventListener("click", function (event) {
+					const deleteBtn = event.target.closest("[data-delete-user-email]");
+					if (!deleteBtn) return;
+					event.preventDefault();
+					const targetEmail = deleteBtn.getAttribute("data-delete-user-email");
+					if (targetEmail) {
+						deleteRegisteredUserPermanently(targetEmail);
+					}
+				});
+			}
+
+			// Controlar visibilidad exclusiva de la opción y vista "Personas Registradas" solo para el usuario "administrador"
+			function updateAdminExclusiveAccessUI() {
+				const isSuperAdmin = isSuperAdminSessionActive();
+				const personasSection = document.getElementById("personas-registradas");
+
+				if (navItemPersonasRegistradas) {
+					navItemPersonasRegistradas.classList.toggle("hidden", !isSuperAdmin);
+					navItemPersonasRegistradas.setAttribute("aria-hidden", isSuperAdmin ? "false" : "true");
+				}
+				if (heroAdminUsersBtn) {
+					heroAdminUsersBtn.classList.toggle("hidden", !isSuperAdmin);
+				}
+				if (accountAdminUsersBtn) {
+					accountAdminUsersBtn.classList.toggle("hidden", !isSuperAdmin);
+				}
+
+				if (adminRealtimePollingInterval) {
+					clearInterval(adminRealtimePollingInterval);
+					adminRealtimePollingInterval = null;
+				}
+
+				if (isSuperAdmin) {
+					loadAndRenderRegisteredUsers();
+					adminRealtimePollingInterval = setInterval(function () {
+						if (isSuperAdminSessionActive()) {
+							loadAndRenderRegisteredUsers();
+						}
+					}, 4000);
+				} else {
+					if (registeredUsersListEl) {
+						registeredUsersListEl.innerHTML = "";
+					}
+					if (adminDeleteFeedbackEl) {
+						adminDeleteFeedbackEl.classList.add("hidden");
+					}
+					if (personasSection && !personasSection.classList.contains("hidden")) {
+						personasSection.classList.add("hidden");
+						personasSection.setAttribute("aria-hidden", "true");
+						showSection("inicio");
+					}
+				}
+			}
+
+			if (heroAdminUsersBtn) {
+				heroAdminUsersBtn.addEventListener("click", function () {
+					if (isSuperAdminSessionActive()) {
+						showSection("personas-registradas");
+					}
+				});
+			}
+
+			if (accountAdminUsersBtn) {
+				accountAdminUsersBtn.addEventListener("click", function () {
+					if (isSuperAdminSessionActive()) {
+						showSection("personas-registradas");
+					}
+				});
+			}
+
+			if (refreshRegisteredUsersBtn) {
+				refreshRegisteredUsersBtn.addEventListener("click", function () {
+					if (isSuperAdminSessionActive()) {
+						loadAndRenderRegisteredUsers();
+					}
+				});
+			}
+
+			window.addEventListener("storage", function (evt) {
+				if (evt.key === USERS_VAULT_KEY && isSuperAdminSessionActive()) {
+					loadAndRenderRegisteredUsers();
+				}
+			});
+
+			// Actualizar todos los elementos visuales de la foto de perfil en la interfaz
+			function updateAllProfileAvatars(fotoPerfilDataUrl) {
+				const hasPhoto = Boolean(fotoPerfilDataUrl && String(fotoPerfilDataUrl).startsWith("data:image/"));
+
+				if (navUserAvatar) {
+					if (hasPhoto) {
+						navUserAvatar.src = fotoPerfilDataUrl;
+						navUserAvatar.classList.remove("hidden");
+					} else {
+						navUserAvatar.removeAttribute("src");
+						navUserAvatar.classList.add("hidden");
+					}
+				}
+
+				if (heroProfileAvatar && heroProfilePlaceholder) {
+					if (hasPhoto) {
+						heroProfileAvatar.src = fotoPerfilDataUrl;
+						heroProfileAvatar.classList.remove("hidden");
+						heroProfilePlaceholder.classList.add("hidden");
+					} else {
+						heroProfileAvatar.removeAttribute("src");
+						heroProfileAvatar.classList.add("hidden");
+						heroProfilePlaceholder.classList.remove("hidden");
+					}
+				}
+
+				if (accountProfileAvatar && accountProfilePlaceholder) {
+					if (hasPhoto) {
+						accountProfileAvatar.src = fotoPerfilDataUrl;
+						accountProfileAvatar.classList.remove("hidden");
+						accountProfilePlaceholder.classList.add("hidden");
+					} else {
+						accountProfileAvatar.removeAttribute("src");
+						accountProfileAvatar.classList.add("hidden");
+						accountProfilePlaceholder.classList.remove("hidden");
+					}
+				}
+			}
+
+			// Regla 2: Bloquear o desbloquear los campos de correo (@gmail.com) según estado de la sesión
+			function applyEmailLockState(isLocked, emailValue) {
+				const loginEmailEl = document.getElementById("login-usuario");
+				const registerEmailEl = document.getElementById("register-correo");
+				const loginSubmitBtn = document.getElementById("login-submit-btn");
+				const registerSubmitBtn = document.getElementById("register-submit-btn");
+
+				if (loginEmailEl) {
+					if (isLocked && emailValue) {
+						loginEmailEl.value = emailValue;
+					}
+					loginEmailEl.readOnly = isLocked;
+					loginEmailEl.disabled = isLocked;
+					loginEmailEl.classList.toggle("opacity-60", isLocked);
+					loginEmailEl.classList.toggle("cursor-not-allowed", isLocked);
+				}
+
+				if (registerEmailEl) {
+					if (isLocked && emailValue) {
+						registerEmailEl.value = emailValue;
+					}
+					registerEmailEl.readOnly = isLocked;
+					registerEmailEl.disabled = isLocked;
+					registerEmailEl.classList.toggle("opacity-60", isLocked);
+					registerEmailEl.classList.toggle("cursor-not-allowed", isLocked);
+				}
+
+				if (loginEmailLockBadge) {
+					loginEmailLockBadge.classList.toggle("hidden", !isLocked);
+				}
+
+				if (heroLockedEmail) {
+					heroLockedEmail.value = isLocked && emailValue ? emailValue : "";
+					heroLockedEmail.readOnly = true;
+					heroLockedEmail.disabled = true;
+				}
+
+				if (accountLockedEmail) {
+					accountLockedEmail.value = isLocked && emailValue ? emailValue : "Sin sesión autenticada (@gmail.com)";
+					accountLockedEmail.readOnly = true;
+					accountLockedEmail.disabled = true;
+				}
+
+				if (loginSubmitBtn) {
+					loginSubmitBtn.disabled = isLocked;
+					loginSubmitBtn.classList.toggle("opacity-50", isLocked);
+					loginSubmitBtn.classList.toggle("cursor-not-allowed", isLocked);
+				}
+
+				if (registerSubmitBtn) {
+					registerSubmitBtn.disabled = isLocked;
+					registerSubmitBtn.classList.toggle("opacity-50", isLocked);
+					registerSubmitBtn.classList.toggle("cursor-not-allowed", isLocked);
+				}
+
+				if (loginGmailHint && isLocked) {
+					loginGmailHint.className = "text-[10px] font-bold text-amber-300 leading-tight";
+					loginGmailHint.textContent = "🔒 Correo bloqueado por sesión activa. Cierra sesión explícitamente para cambiarlo.";
+				}
+				if (registerGmailHint && isLocked) {
+					registerGmailHint.className = "text-[9.5px] font-bold text-amber-300 leading-tight";
+					registerGmailHint.textContent = "🔒 Correo bloqueado por sesión activa.";
+				}
+			}
+
+			// Regla 5: Mostrar notificación de correo automático de bienvenida EXCLUSIVAMENTE en el primer registro
+			function showWelcomeEmailBannerOnce(correo, nombre) {
+				if (!welcomeEmailBanner || !welcomeEmailDetails) return;
+				const subject = encodeURIComponent("¡Bienvenido(a) a SEIJAKUTECH, " + nombre + "!");
+				const body = encodeURIComponent(
+					"Hola " + nombre + " (" + correo + "),\n\n" +
+					"¡Te damos la bienvenida oficial a SEIJAKUTECH - Servicio Técnico!\n" +
+					"Tu cuenta @gmail.com, tu contraseña encriptada y tu foto de perfil han quedado guardadas de forma permanente en nuestra base de datos.\n\n" +
+					"Este correo de bienvenida se envía automáticamente por única vez al registrar tu cuenta nueva.\n\n" +
+					"Atentamente,\nEquipo SEIJAKUTECH (seijakutech@gmail.com)"
+				);
+
+				welcomeEmailDetails.textContent =
+					"Enviado automáticamente a " + correo + " (¡Bienvenido/a " + nombre + "!). Registrado como enviado en la base de datos para no reenviarlo en futuros inicios de sesión.";
+				if (welcomeEmailGmailLink) {
+					welcomeEmailGmailLink.href =
+						"https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(correo) + "&su=" + subject + "&body=" + body;
+				}
+				welcomeEmailBanner.classList.remove("hidden");
+			}
+
+			function hideWelcomeEmailBanner() {
+				if (welcomeEmailBanner) {
+					welcomeEmailBanner.classList.add("hidden");
+				}
+			}
+
+			// Subir o editar foto de perfil con sesión activa y guardarla persistentemente
+			async function handleActiveProfilePhotoChange(file) {
+				if (!currentAuthenticatedSession || currentAuthenticatedSession.isGuest || !isValidSessionAccount(currentAuthenticatedSession.correo)) {
+					renderMariaDBMessage(
+						false,
+						"[Sesión Requerida] No se puede guardar foto",
+						"AUTH CHECK FAILED: Se requiere sesión activa",
+						"Inicia sesión con tu cuenta antes de subir o editar tu foto de perfil."
+					);
+					return;
+				}
+
+				try {
+					const dataUrl = await processImageFileToDataURL(file);
+					const correoKey = currentAuthenticatedSession.correo.toLowerCase();
+
+					// 1. Actualizar en bóveda local persistente
+					const vault = getUsersVault();
+					if (vault[correoKey]) {
+						vault[correoKey].fotoPerfil = dataUrl;
+						saveUsersVault(vault);
+					}
+
+					// 2. Actualizar en sesión activa
+					currentAuthenticatedSession.fotoPerfil = dataUrl;
+					localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(currentAuthenticatedSession));
+
+					// 3. Actualizar vistas inmediatamente
+					updateAllProfileAvatars(dataUrl);
+					if (heroPhotoFeedback) {
+						heroPhotoFeedback.textContent = "✓ Foto de perfil guardada de forma persistente";
+						heroPhotoFeedback.classList.remove("hidden");
+					}
+					if (accountPhotoHint) {
+						accountPhotoHint.className = "text-[11px] font-bold text-emerald-300";
+						accountPhotoHint.textContent = "✓ Foto de perfil actualizada y guardada en la base de datos.";
+					}
+
+					// 4. Guardar en el servidor (MariaDB + data/users-db.json)
+					try {
+						await fetch("/api/profile/photo", {
+							method: "PUT",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify({ correo: correoKey, fotoPerfil: dataUrl })
+						});
+					} catch (_) {
+						// Ya respaldado en localStorage
+					}
+
+					if (isSuperAdminSessionActive()) {
+						loadAndRenderRegisteredUsers();
+					}
+
+					renderMariaDBMessage(
+						true,
+						"[MariaDB 11.4 - Foto de Perfil Persistente] Guardado Exitoso",
+						"UPDATE usuarios SET foto_perfil = 'data:image/jpeg;base64,...' WHERE correo = '" + correoKey + "'",
+						"Tu nueva foto de perfil quedó guardada permanentemente para '" + correoKey + "'."
+					);
+				} catch (err) {
+					renderMariaDBMessage(
+						false,
+						"[Error de Imagen] No se pudo procesar la foto",
+						"IMAGE_PARSE_ERROR",
+						err.message || "Selecciona una imagen válida (JPG, PNG o WebP)."
+					);
+				}
+			}
+
+			if (heroPhotoInput) {
+				heroPhotoInput.addEventListener("change", function () {
+					if (this.files && this.files[0]) {
+						handleActiveProfilePhotoChange(this.files[0]);
+					}
+				});
+			}
+
+			if (accountPhotoInput) {
+				accountPhotoInput.addEventListener("change", function () {
+					if (this.files && this.files[0]) {
+						handleActiveProfilePhotoChange(this.files[0]);
+					}
+				});
+			}
+
+			if (registerPhotoInput) {
+				registerPhotoInput.addEventListener("change", async function () {
+					if (this.files && this.files[0]) {
+						try {
+							const file = this.files[0];
+							pendingRegisterPhotoDataUrl = await processImageFileToDataURL(file);
+							if (registerPhotoPreview && registerPhotoPlaceholder) {
+								registerPhotoPreview.src = pendingRegisterPhotoDataUrl;
+								registerPhotoPreview.classList.remove("hidden");
+								registerPhotoPlaceholder.classList.add("hidden");
+							}
+							if (registerPhotoName) {
+								registerPhotoName.className = "text-[9.5px] font-bold text-emerald-300 truncate";
+								registerPhotoName.textContent = "✓ Lista para guardar: " + file.name;
+							}
+						} catch (_) {
+							pendingRegisterPhotoDataUrl = null;
+						}
+					}
+				});
+			}
+
+			// 5. Sistema de Bloqueo por Fuerza Bruta (3 intentos fallidos -> 30s de bloqueo con temporizador regresivo)
+			function getBruteForceData() {
+				try {
+					const raw = localStorage.getItem(BRUTE_FORCE_KEY);
+					return raw ? JSON.parse(raw) : { attempts: 0, lockUntil: 0 };
+				} catch (e) {
+					return { attempts: 0, lockUntil: 0 };
+				}
+			}
+
+			function saveBruteForceData(data) {
+				try {
+					localStorage.setItem(BRUTE_FORCE_KEY, JSON.stringify(data));
+				} catch (e) {
+					// Ignorar errores de almacenamiento
+				}
+			}
+
+			function setAuthFormsDisabled(disabled) {
+				["login-usuario", "login-password", "login-submit-btn", "register-nombre", "register-correo", "register-usuario", "register-password", "register-submit-btn"].forEach(function (id) {
+					const el = document.getElementById(id);
+					if (el) {
+						el.disabled = disabled;
+						el.classList.toggle("opacity-50", disabled);
+						el.classList.toggle("cursor-not-allowed", disabled);
+					}
+				});
+			}
+
+			function startBruteForceLockCountdown(lockUntilTimestamp) {
+				if (bruteForceInterval) clearInterval(bruteForceInterval);
+
+				function updateTimer() {
+					const remainingMs = lockUntilTimestamp - Date.now();
+					if (remainingMs <= 0) {
+						clearInterval(bruteForceInterval);
+						bruteForceInterval = null;
+						saveBruteForceData({ attempts: 0, lockUntil: 0 });
+						if (bruteForceBanner) bruteForceBanner.classList.remove("hidden");
+						setAuthFormsDisabled(false);
+						if (currentAuthenticatedSession && !currentAuthenticatedSession.isGuest) {
+							applyEmailLockState(true, currentAuthenticatedSession.correo);
+						}
+						renderMariaDBMessage(
+							true,
+							"[Brute-Force Lock] Bloqueo Finalizado",
+							"SET SESSION brute_force_lock = 0; -> Temporizador completado",
+							"El formulario ha sido desbloqueado. Puedes intentar iniciar sesión nuevamente."
+						);
+						return;
+					}
+
+					const secondsLeft = Math.ceil(remainingMs / 1000);
+					if (bruteForceBanner) bruteForceBanner.classList.remove("hidden");
+					if (bruteForceTimerEl) bruteForceTimerEl.textContent = secondsLeft + "s";
+					setAuthFormsDisabled(true);
+				}
+
+				updateTimer();
+				bruteForceInterval = setInterval(updateTimer, 1000);
+			}
+
+			function registerFailedLoginAttempt(customMessage) {
+				const state = getBruteForceData();
+				state.attempts = (state.attempts || 0) + 1;
+
+				if (state.attempts >= MAX_FAILED_ATTEMPTS) {
+					state.lockUntil = Date.now() + LOCKOUT_SECONDS * 1000;
+					saveBruteForceData(state);
+					startBruteForceLockCountdown(state.lockUntil);
+					renderMariaDBMessage(
+						false,
+						"[Brute-Force Lock] Bloqueo de Seguridad por 30s",
+						"PREPARE stmt FROM 'SELECT * FROM usuarios WHERE correo = ?' -> 3/3 intentos fallidos",
+						"Se superó el límite de 3 intentos fallidos seguidos. Formulario bloqueado por 30 segundos."
+					);
+					return;
+				}
+
+				saveBruteForceData(state);
+				renderMariaDBMessage(
+					false,
+					"[Seguridad MariaDB 11.4] Intento Fallido (" + state.attempts + "/" + MAX_FAILED_ATTEMPTS + ")",
+					"PREPARE stmt FROM 'SELECT id, password_hash FROM usuarios WHERE correo = ?'",
+					customMessage || ("Credenciales o requisitos de seguridad inválidos. Intentos restantes antes de bloqueo: " + (MAX_FAILED_ATTEMPTS - state.attempts) + ".")
+				);
+			}
+
+			// Verificar si hay un bloqueo activo al cargar la página
+			const initialLock = getBruteForceData();
+			if (initialLock.lockUntil && initialLock.lockUntil > Date.now()) {
+				startBruteForceLockCountdown(initialLock.lockUntil);
+			}
+
+			function switchAuthTab(mode) {
+				if (!loginForm || !registerForm || !tabBtnLogin || !tabBtnRegister) return;
+				if (mode === "register") {
+					loginForm.classList.add("hidden");
+					loginForm.classList.remove("flex");
+					registerForm.classList.remove("hidden");
+					registerForm.classList.add("flex");
+					tabBtnRegister.setAttribute("aria-selected", "true");
+					tabBtnLogin.setAttribute("aria-selected", "false");
+					tabBtnRegister.className = "w-full py-1.5 px-2.5 rounded-md text-xs font-black uppercase tracking-wider transition-all cursor-pointer bg-[#00f0ff] text-slate-950 shadow-[0_0_12px_rgba(0,240,255,0.5)]";
+					tabBtnLogin.className = "w-full py-1.5 px-2.5 rounded-md text-xs font-black uppercase tracking-wider transition-all cursor-pointer text-cyan-300 hover:text-white";
+				} else {
+					registerForm.classList.add("hidden");
+					registerForm.classList.remove("flex");
+					loginForm.classList.remove("hidden");
+					loginForm.classList.add("flex");
+					tabBtnLogin.setAttribute("aria-selected", "true");
+					tabBtnRegister.setAttribute("aria-selected", "false");
+					tabBtnLogin.className = "w-full py-1.5 px-2.5 rounded-md text-xs font-black uppercase tracking-wider transition-all cursor-pointer bg-[#00f0ff] text-slate-950 shadow-[0_0_12px_rgba(0,240,255,0.5)]";
+					tabBtnRegister.className = "w-full py-1.5 px-2.5 rounded-md text-xs font-black uppercase tracking-wider transition-all cursor-pointer text-cyan-300 hover:text-white";
+				}
+			}
+
+			if (tabBtnLogin) {
+				tabBtnLogin.addEventListener("click", function () {
+					switchAuthTab("login");
+				});
+			}
+
+			if (tabBtnRegister) {
+				tabBtnRegister.addEventListener("click", function () {
+					switchAuthTab("register");
+				});
+			}
+
+			// Activar sesión autenticada o de invitado, bloqueando el campo de usuario/correo mientras la sesión esté activa
+			async function setActiveSession(sessionObj, shouldScroll) {
+				const isGuest = Boolean(sessionObj.isGuest);
+				const safeCorreo = isGuest ? "" : sanitizeXSS(String(sessionObj.correo || "").trim().toLowerCase());
+				const isSuperAdmin = !isGuest && safeCorreo === SUPER_ADMIN_USER;
+				const safeName = sanitizeXSS(sessionObj.nombre || sessionObj.displayName || (isSuperAdmin ? "Administrador SEIJAKUTECH" : safeCorreo) || "Invitado");
+				const safeUsuario = sanitizeXSS(sessionObj.usuario || safeName);
+				const safeRole = isSuperAdmin ? "administrador" : sanitizeXSS(sessionObj.role || (isGuest ? "invitado" : "cliente"));
+				const fotoPerfil = sessionObj.fotoPerfil || null;
+
+				currentAuthenticatedSession = {
+					displayName: safeName,
+					nombre: safeName,
+					correo: safeCorreo,
+					usuario: safeUsuario,
+					role: safeRole,
+					isSuperAdmin: isSuperAdmin,
+					fotoPerfil: fotoPerfil,
+					isGuest: isGuest,
+					welcomeEmailSent: Boolean(sessionObj.welcomeEmailSent)
+				};
+
+				if (navUserLabel) {
+					navUserLabel.textContent = isGuest ? "Modo Invitado" : (isSuperAdmin ? "Admin: " + safeCorreo : safeCorreo);
+				}
+				if (navUserDot) {
+					navUserDot.className = isGuest
+						? "w-2 h-2 rounded-full bg-violet-400 shadow-[0_0_8px_#a78bfa] shrink-0"
+						: (isSuperAdmin
+							? "w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399] shrink-0"
+							: "w-2 h-2 rounded-full bg-[#00f0ff] shadow-[0_0_8px_#00f0ff] shrink-0");
+				}
+				if (navLogoutBtn) {
+					navLogoutBtn.classList.toggle("hidden", isGuest);
+				}
+
+				if (accountStatusBadge) {
+					accountStatusBadge.textContent = isGuest
+						? "Modo Invitado Activo"
+						: (isSuperAdmin
+							? "Sesión de Administrador Activa (usuario: administrador)"
+							: "Sesión Autenticada (@gmail.com Bloqueado & Persistente)");
+				}
+				if (accountUsername) {
+					accountUsername.textContent = isGuest ? "Invitado" : (safeName + " (" + safeCorreo + ")");
+				}
+				if (accountRole) {
+					accountRole.textContent = safeRole;
+				}
+				if (accountWelcomeStatus) {
+					accountWelcomeStatus.textContent = isGuest
+						? "No aplica en Modo Invitado"
+						: (isSuperAdmin ? "Acceso directo de Administrador" : "Enviado automáticamente en 1er registro (No se reenvía)");
+				}
+
+				// Mostrar/ocultar controles de sesión activa y foto de perfil
+				if (!isGuest && isValidSessionAccount(safeCorreo)) {
+					if (activeSessionHeroPanel) {
+						activeSessionHeroPanel.classList.remove("hidden");
+						activeSessionHeroPanel.classList.add("flex");
+					}
+					if (heroSessionName) {
+						heroSessionName.textContent = safeName + " — " + safeCorreo + (isSuperAdmin ? " [ROL: ADMINISTRADOR]" : "");
+					}
+					if (accountPhotoUploadLabel) {
+						accountPhotoUploadLabel.classList.remove("hidden");
+						accountPhotoUploadLabel.classList.add("inline-flex");
+					}
+					if (accountPhotoHint) {
+						accountPhotoHint.className = "text-[11px] text-cyan-300";
+						accountPhotoHint.textContent = "Sesión activa: puedes subir o cambiar tu foto y quedará guardada en la BD.";
+					}
+					if (accountLogoutBtn) {
+						accountLogoutBtn.classList.remove("hidden");
+					}
+					applyEmailLockState(true, safeCorreo);
+					updateAllProfileAvatars(fotoPerfil);
+				} else {
+					if (activeSessionHeroPanel) {
+						activeSessionHeroPanel.classList.add("hidden");
+						activeSessionHeroPanel.classList.remove("flex");
+					}
+					if (accountPhotoUploadLabel) {
+						accountPhotoUploadLabel.classList.add("hidden");
+						accountPhotoUploadLabel.classList.remove("inline-flex");
+					}
+					if (accountLogoutBtn) {
+						accountLogoutBtn.classList.add("hidden");
+					}
+					applyEmailLockState(false, "");
+					updateAllProfileAvatars(null);
+				}
+
+				// Actualizar visibilidad exclusiva de "Personas Registradas" solo para el usuario "administrador"
+				updateAdminExclusiveAccessUI();
+
+				try {
+					const integrityHash = await sha256WebCrypto(safeCorreo + ":" + safeRole + ":SEIJAKUTECH_SALT");
+					currentAuthenticatedSession.cryptoDigest = "sha256:" + integrityHash;
+					localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(currentAuthenticatedSession));
+				} catch (e) {
+					// Ignorar errores de almacenamiento
+				}
+
+				if (shouldScroll) {
+					const servicesCatalog = document.getElementById("services");
+					if (servicesCatalog && !servicesCatalog.classList.contains("hidden")) {
+						setTimeout(function () {
+							servicesCatalog.scrollIntoView({ behavior: "smooth", block: "start" });
+						}, 350);
+					}
+				}
+			}
+
+			// Cerrar sesión explícitamente para desbloquear el campo de usuario/correo
+			function logoutActiveSession() {
+				currentAuthenticatedSession = null;
+				try {
+					localStorage.removeItem(SESSION_STORAGE_KEY);
+				} catch (e) {
+					// Ignorar
+				}
+
+				applyEmailLockState(false, "");
+				updateAllProfileAvatars(null);
+				hideWelcomeEmailBanner();
+				updateAdminExclusiveAccessUI();
+
+				const loginEmailEl = document.getElementById("login-usuario");
+				const loginPwdEl = document.getElementById("login-password");
+				const registerEmailEl = document.getElementById("register-correo");
+				const registerPwdEl = document.getElementById("register-password");
+				if (loginEmailEl) loginEmailEl.value = "";
+				if (loginPwdEl) loginPwdEl.value = "";
+				if (registerEmailEl) registerEmailEl.value = "";
+				if (registerPwdEl) registerPwdEl.value = "";
+
+				if (loginGmailHint) {
+					loginGmailHint.className = "text-[10px] font-medium text-slate-400 leading-tight";
+					loginGmailHint.innerHTML = 'Requisito estricto: correos terminados en <strong class="text-cyan-300">@gmail.com</strong>';
+				}
+				if (registerGmailHint) {
+					registerGmailHint.className = "text-[9.5px] font-medium text-slate-400 leading-tight";
+					registerGmailHint.innerHTML = 'Solo se aceptan cuentas <strong class="text-cyan-300">@gmail.com</strong>';
+				}
+				if (heroPhotoFeedback) {
+					heroPhotoFeedback.classList.add("hidden");
+				}
+				if (activeSessionHeroPanel) {
+					activeSessionHeroPanel.classList.add("hidden");
+					activeSessionHeroPanel.classList.remove("flex");
+				}
+				if (navUserLabel) navUserLabel.textContent = "Sin sesión";
+				if (navUserDot) navUserDot.className = "w-2 h-2 rounded-full bg-slate-400 shrink-0";
+				if (navLogoutBtn) navLogoutBtn.classList.add("hidden");
+				if (accountStatusBadge) accountStatusBadge.textContent = "Sin sesión activa";
+				if (accountUsername) accountUsername.textContent = "Invitado";
+				if (accountRole) accountRole.textContent = "invitado";
+				if (accountWelcomeStatus) accountWelcomeStatus.textContent = "Pendiente de inicio de sesión";
+				if (accountPhotoUploadLabel) {
+					accountPhotoUploadLabel.classList.add("hidden");
+					accountPhotoUploadLabel.classList.remove("inline-flex");
+				}
+				if (accountPhotoHint) {
+					accountPhotoHint.className = "text-[11px] text-slate-400";
+					accountPhotoHint.textContent = "Inicia sesión con tu cuenta @gmail.com para subir o editar tu foto de perfil.";
+				}
+				if (accountLogoutBtn) {
+					accountLogoutBtn.classList.add("hidden");
+				}
+
+				renderMariaDBMessage(
+					true,
+					"[Sesión Cerrada Explícitamente] Campo Desbloqueado",
+					"SESSION TERMINATED -> Campo de usuario/correo desbloqueado",
+					"Has cerrado sesión. El campo de inicio de sesión ha sido desbloqueado."
+				);
+			}
+
+			if (heroLogoutBtn) {
+				heroLogoutBtn.addEventListener("click", logoutActiveSession);
+			}
+			if (accountLogoutBtn) {
+				accountLogoutBtn.addEventListener("click", logoutActiveSession);
+			}
+			if (navLogoutBtn) {
+				navLogoutBtn.addEventListener("click", logoutActiveSession);
+			}
+
+			// Restaurar sesión previa al recargar la página (verificando que el usuario siga existiendo en la BD)
+			(async function restorePersistedSessionOnLoad() {
+				try {
+					const savedSession = localStorage.getItem(SESSION_STORAGE_KEY);
+					if (!savedSession) return;
+					const parsed = JSON.parse(savedSession);
+					if (!parsed) return;
+
+					if (parsed.isGuest) {
+						await setActiveSession(parsed, false);
+						return;
+					}
+
+					const correoKey = String(parsed.correo || "").trim().toLowerCase();
+					if (!isValidSessionAccount(correoKey)) {
+						localStorage.removeItem(SESSION_STORAGE_KEY);
+						return;
+					}
+
+					// Recuperar datos más recientes desde la bóveda local y el servidor
+					const vault = getUsersVault();
+					if (vault[correoKey]) {
+						parsed.fotoPerfil = vault[correoKey].fotoPerfil || parsed.fotoPerfil || null;
+						parsed.nombre = vault[correoKey].nombre || parsed.nombre;
+					}
+
+					await setActiveSession(parsed, false);
+
+					// Sincronizar con la base de datos del servidor si está disponible
+					try {
+						const res = await fetch("/api/profile?correo=" + encodeURIComponent(correoKey));
+						const ct = res.headers.get("content-type") || "";
+						if (res.status === 404 && ct.includes("application/json")) {
+							// Si el usuario fue eliminado de la base de datos por el Administrador, cerrar su sesión y borrarlo localmente
+							delete vault[correoKey];
+							saveUsersVault(vault);
+							logoutActiveSession();
+							return;
+						}
+						if (res.ok && ct.includes("application/json")) {
+							const data = await res.json();
+							if (data && data.ok && data.user) {
+								const latestPhoto = data.user.fotoPerfil || parsed.fotoPerfil || null;
+								parsed.fotoPerfil = latestPhoto;
+								parsed.nombre = data.user.nombre || parsed.nombre;
+								parsed.role = data.user.rol || parsed.role;
+								if (vault[correoKey]) {
+									vault[correoKey].fotoPerfil = latestPhoto;
+									saveUsersVault(vault);
+								}
+								await setActiveSession(parsed, false);
+							}
+						}
+					} catch (_) {
+						// Servidor estático: sesión y foto restauradas desde localStorage
+					}
+				} catch (e) {
+					// Sin sesión previa válida
+				}
+			})();
+
+			function renderMariaDBMessage(isSuccess, title, queryLog, details) {
+				if (!loginResponseBox) return;
+				loginResponseBox.classList.remove(
+					"hidden",
+					"bg-cyan-950/80",
+					"border-[#00f0ff]",
+					"text-cyan-200",
+					"shadow-[0_0_18px_rgba(0,240,255,0.3)]",
+					"bg-red-950/80",
+					"border-red-400",
+					"text-red-200",
+					"shadow-[0_0_18px_rgba(248,113,113,0.3)]"
+				);
+
+				if (isSuccess) {
+					loginResponseBox.classList.add(
+						"bg-cyan-950/80",
+						"border-[#00f0ff]",
+						"text-cyan-200",
+						"shadow-[0_0_18px_rgba(0,240,255,0.3)]"
+					);
+				} else {
+					loginResponseBox.classList.add(
+						"bg-red-950/80",
+						"border-red-400",
+						"text-red-200",
+						"shadow-[0_0_18px_rgba(248,113,113,0.3)]"
+					);
+				}
+
+				loginResponseBox.innerHTML =
+					'<div class="font-bold uppercase tracking-wider text-cyan-400 mb-0.5">' + sanitizeXSS(title) + "</div>" +
+					'<div class="text-[10px] text-slate-300 mb-0.5 break-all">' + sanitizeXSS(queryLog) + "</div>" +
+					'<div class="font-semibold">' + sanitizeXSS(details) + "</div>";
+			}
+
+			// Inicio de sesión: Excepción exclusiva sin @gmail.com para "administrador" y obligación estricta @gmail.com + registro activo en BD para usuarios normales
+			if (loginForm) {
+				loginForm.addEventListener("submit", async function (event) {
+					event.preventDefault();
+
+					// Si ya hay sesión activa, el campo está bloqueado hasta cerrar sesión explícitamente
+					if (currentAuthenticatedSession && !currentAuthenticatedSession.isGuest) {
+						renderMariaDBMessage(
+							false,
+							"[Sesión Activa Bloqueada] Cuenta Inmodificable",
+							"LOCKED SESSION: " + currentAuthenticatedSession.correo,
+							"Tu sesión actual está bloqueada. Debes presionar 'Cerrar Sesión' explícitamente antes de cambiar de cuenta."
+						);
+						return;
+					}
+
+					// Verificar bloqueo Brute-Force activo
+					const lockState = getBruteForceData();
+					if (lockState.lockUntil && lockState.lockUntil > Date.now()) {
+						startBruteForceLockCountdown(lockState.lockUntil);
+						return;
+					}
+
+					const correoInput = document.getElementById("login-usuario");
+					const passwordInput = document.getElementById("login-password");
+					const rawInput = correoInput ? correoInput.value.trim() : "";
+					const rawCorreo = rawInput.toLowerCase();
+					const rawPassword = passwordInput ? passwordInput.value : "";
+
+					if (hasMaliciousPayload(rawInput) || hasMaliciousPayload(rawPassword)) {
+						registerFailedLoginAttempt("Ataque SQLi / XSS bloqueado por filtro de sanitización y Prepared Statements.");
+						return;
+					}
+
+					if (!rawPassword) {
+						renderMariaDBMessage(
+							false,
+							"[Contraseña Requerida] Acceso Bloqueado",
+							"EMPTY PASSWORD",
+							"Ingresa tu contraseña para verificar tus credenciales."
+						);
+						return;
+					}
+
+					// En inicios de sesión nunca se envía ni muestra correo de bienvenida
+					hideWelcomeEmailBanner();
+
+					const pwdSha256 = await sha256WebCrypto(rawPassword);
+					const vault = getUsersVault();
+
+					// Regla 1: Excepción de login para Administrador — texto exacto "administrador" + contraseña "Administrador.2004" (sin @gmail.com)
+					if (rawInput === SUPER_ADMIN_USER) {
+						if (rawPassword !== SUPER_ADMIN_PASS) {
+							registerFailedLoginAttempt(
+								"Acceso bloqueado: La contraseña ingresada no coincide con la cuenta de Administrador ('administrador')."
+							);
+							return;
+						}
+
+						saveBruteForceData({ attempts: 0, lockUntil: 0 });
+						let adminPhoto = (vault[SUPER_ADMIN_USER] && vault[SUPER_ADMIN_USER].fotoPerfil) || null;
+
+						try {
+							const adminRes = await fetch("/api/login", {
+								method: "POST",
+								headers: { "Content-Type": "application/json" },
+								body: JSON.stringify({ correo: SUPER_ADMIN_USER, usuario: SUPER_ADMIN_USER, password: SUPER_ADMIN_PASS })
+							});
+							const adminCt = adminRes.headers.get("content-type") || "";
+							if (adminRes.ok && adminCt.includes("application/json")) {
+								const adminData = await adminRes.json();
+								if (adminData && adminData.user && adminData.user.fotoPerfil) {
+									adminPhoto = adminData.user.fotoPerfil;
+								}
+							}
+						} catch (_) {
+							// Acceso directo garantizado
+						}
+
+						vault[SUPER_ADMIN_USER] = {
+							nombre: "Administrador SEIJAKUTECH",
+							correo: SUPER_ADMIN_USER,
+							usuario: SUPER_ADMIN_USER,
+							passwordHash: pwdSha256,
+							fotoPerfil: adminPhoto,
+							rol: "administrador",
+							welcomeEmailSent: true,
+							fechaRegistro: (vault[SUPER_ADMIN_USER] && vault[SUPER_ADMIN_USER].fechaRegistro) || new Date().toISOString()
+						};
+						saveUsersVault(vault);
+
+						renderMariaDBMessage(
+							true,
+							"[Rol Administrador Exclusivo] Acceso Directo Concedido",
+							"GRANT ADMIN SESSION TO 'administrador' -> Panel 'Personas Registradas' HABILITADO",
+							"Sesión iniciada con rol de Administrador ('administrador'). La sección 'Personas Registradas' ya está visible."
+						);
+
+						await setActiveSession(
+							{
+								nombre: "Administrador SEIJAKUTECH",
+								correo: SUPER_ADMIN_USER,
+								usuario: SUPER_ADMIN_USER,
+								role: "administrador",
+								isSuperAdmin: true,
+								fotoPerfil: adminPhoto,
+								isGuest: false,
+								welcomeEmailSent: true
+							},
+							false
+						);
+						return;
+					}
+
+					// Obligación estricta de terminar en @gmail.com para todos los demás usuarios normales
+					if (!isStrictGmail(rawCorreo)) {
+						renderMariaDBMessage(
+							false,
+							"[Validación Estricta @gmail.com] Acceso Bloqueado",
+							"REJECTED EMAIL: '" + sanitizeXSS(rawInput) + "' NOT LIKE '%@gmail.com'",
+							"Todos los usuarios normales deben iniciar sesión con un correo terminado estrictamente en @gmail.com."
+						);
+						return;
+					}
+
+					// Regla 3: Para usuarios normales, verificar que existan en la base de datos (y no hayan sido eliminados)
+					const localUser = vault[rawCorreo] || null;
+
+					try {
+						const response = await fetch("/api/login", {
+							method: "POST",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify({ correo: rawCorreo, usuario: rawCorreo, password: rawPassword })
+						});
+
+						const contentType = response.headers.get("content-type") || "";
+						if (!contentType.includes("application/json")) {
+							throw new Error("STATIC_HOST_FALLBACK");
+						}
+
+						const data = await response.json();
+						if (response.status === 429 || data.locked) {
+							const lockUntil = Date.now() + Number(data.retryAfterSeconds || 30) * 1000;
+							saveBruteForceData({ attempts: MAX_FAILED_ATTEMPTS, lockUntil: lockUntil });
+							startBruteForceLockCountdown(lockUntil);
+							return;
+						}
+
+						if (response.ok && data.ok && data.user) {
+							saveBruteForceData({ attempts: 0, lockUntil: 0 });
+							const mergedPhoto = data.user.fotoPerfil || (localUser && localUser.fotoPerfil) || null;
+							vault[rawCorreo] = {
+								nombre: data.user.nombre || (localUser && localUser.nombre) || rawCorreo.split("@")[0],
+								correo: rawCorreo,
+								usuario: data.user.usuario || rawCorreo.split("@")[0],
+								passwordHash: pwdSha256,
+								fotoPerfil: mergedPhoto,
+								rol: data.user.rol || "cliente",
+								welcomeEmailSent: true,
+								fechaRegistro: data.user.fecha_registro || (localUser && localUser.fechaRegistro) || new Date().toISOString()
+							};
+							saveUsersVault(vault);
+
+							renderMariaDBMessage(
+								true,
+								"[MariaDB 11.4 - Verificación Exitosa] Acceso Concedido",
+								"SELECT correo, password_hash, foto_perfil FROM usuarios WHERE correo = ? -> 1 row matched",
+								"Bienvenido de nuevo, " + rawCorreo + ". Correo y contraseña verificados en la base de datos."
+							);
+							await setActiveSession(
+								{
+									nombre: vault[rawCorreo].nombre,
+									correo: rawCorreo,
+									usuario: vault[rawCorreo].usuario,
+									role: vault[rawCorreo].rol,
+									fotoPerfil: mergedPhoto,
+									isGuest: false,
+									welcomeEmailSent: true
+								},
+								true
+							);
+							return;
+						}
+
+						// Regla 3: Si el servidor indica que el usuario no existe (o fue eliminado de la BD), borrar cualquier rastro local y rechazar acceso
+						if (data.userNotFound || data.code === "USER_NOT_REGISTERED") {
+							if (vault[rawCorreo]) {
+								delete vault[rawCorreo];
+								saveUsersVault(vault);
+							}
+							registerFailedLoginAttempt(
+								data.message ||
+									("Acceso rechazado: El correo '" + rawCorreo + "' no existe en la base de datos. Debes registrarte de nuevo desde cero.")
+							);
+							return;
+						}
+
+						registerFailedLoginAttempt(
+							data.message ||
+								("Acceso bloqueado: El correo '" + rawCorreo + "' no existe o la contraseña no coincide con el registro.")
+						);
+					} catch (err) {
+						// Respaldo solo en caso de servidor estático sin backend Node activo
+						if (!localUser) {
+							registerFailedLoginAttempt(
+								"Acceso rechazado: El correo '" + rawCorreo + "' no existe en la base de datos. Debes registrarte de nuevo desde cero."
+							);
+							return;
+						}
+						if (localUser.passwordHash !== pwdSha256) {
+							registerFailedLoginAttempt(
+								"Acceso bloqueado: La contraseña ingresada no coincide con el registro existente para '" + rawCorreo + "'."
+							);
+							return;
+						}
+
+						saveBruteForceData({ attempts: 0, lockUntil: 0 });
+						renderMariaDBMessage(
+							true,
+							"[Base de Datos Persistente] Acceso Confirmado",
+							"SELECT correo, password_hash, foto_perfil FROM usuarios WHERE correo = '" + rawCorreo + "' -> OK",
+							"Sesión iniciada como '" + rawCorreo + "'. Credenciales y foto de perfil verificadas."
+						);
+						await setActiveSession(
+							{
+								nombre: localUser.nombre,
+								correo: rawCorreo,
+								usuario: localUser.usuario,
+								role: localUser.rol || "cliente",
+								fotoPerfil: localUser.fotoPerfil || null,
+								isGuest: false,
+								welcomeEmailSent: true
+							},
+							true
+						);
+					}
+				});
+			}
+
+			// Registro de usuario nuevo: valida estrictamente @gmail.com, guarda en BD de forma persistente y envía correo de bienvenida ÚNICO
+			if (registerForm) {
+				registerForm.addEventListener("submit", async function (event) {
+					event.preventDefault();
+
+					if (currentAuthenticatedSession && !currentAuthenticatedSession.isGuest) {
+						renderMariaDBMessage(
+							false,
+							"[Sesión Activa Bloqueada] Cierra Sesión Primero",
+							"LOCKED SESSION: " + currentAuthenticatedSession.correo,
+							"Ya tienes una sesión activa con correo bloqueado. Cierra sesión explícitamente para registrar otra cuenta."
+						);
+						return;
+					}
+
+					const lockState = getBruteForceData();
+					if (lockState.lockUntil && lockState.lockUntil > Date.now()) {
+						startBruteForceLockCountdown(lockState.lockUntil);
+						return;
+					}
+
+					const rawNombre = (document.getElementById("register-nombre")?.value || "").trim();
+					const rawCorreo = (document.getElementById("register-correo")?.value || "").trim().toLowerCase();
+					const rawUsuario = (document.getElementById("register-usuario")?.value || "").trim() || rawCorreo.split("@")[0];
+					const rawPassword = document.getElementById("register-password")?.value || "";
+
+					if (hasMaliciousPayload(rawNombre) || hasMaliciousPayload(rawCorreo) || hasMaliciousPayload(rawUsuario)) {
+						renderMariaDBMessage(
+							false,
+							"[Anti-XSS / Anti-SQLi] Entrada Bloqueada",
+							"REJECTED INPUT: Caracteres o vectores de inyección detectados",
+							"Por seguridad se bloquearon caracteres peligrosos (<, >, ', \", SQLi)."
+						);
+						return;
+					}
+
+					if (rawCorreo === SUPER_ADMIN_USER || rawUsuario.toLowerCase() === SUPER_ADMIN_USER) {
+						renderMariaDBMessage(
+							false,
+							"[Cuenta de Administrador Reservada] Acceso Directo",
+							"SUPER_ADMIN_USER: " + SUPER_ADMIN_USER,
+							"El usuario 'administrador' tiene acceso directo. Inicia sesión directamente en la pestaña 'Iniciar Sesión'."
+						);
+						switchAuthTab("login");
+						return;
+					}
+
+					// Validación estricta de correo @gmail.com para todos los usuarios normales
+					if (!isStrictGmail(rawCorreo)) {
+						renderMariaDBMessage(
+							false,
+							"[Validación Estricta @gmail.com] Registro Rechazado",
+							"CHECK (correo LIKE '%@gmail.com') FAILED FOR '" + sanitizeXSS(rawCorreo) + "'",
+							"Solo se permite registrar cuentas con correos que terminen estrictamente en @gmail.com."
+						);
+						return;
+					}
+
+					const nombre = sanitizeXSS(rawNombre || rawCorreo.split("@")[0]);
+					const correo = sanitizeXSS(rawCorreo);
+					const usuario = sanitizeXSS(rawUsuario);
+
+					if (!nombre || !rawPassword || rawPassword.length < 4) {
+						renderMariaDBMessage(
+							false,
+							"[Datos Incompletos] Registro Rechazado",
+							"CHECK (CHAR_LENGTH(password) >= 4)",
+							"Ingresa tu nombre, tu correo @gmail.com y una contraseña de al menos 4 caracteres."
+						);
+						return;
+					}
+
+					const vault = getUsersVault();
+					const pwdSha256 = await sha256WebCrypto(rawPassword);
+					const initialPhoto = pendingRegisterPhotoDataUrl || null;
+					let registeredOnServer = false;
+
+					try {
+						const response = await fetch("/api/register", {
+							method: "POST",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify({
+								nombre: nombre,
+								correo: rawCorreo,
+								usuario: usuario,
+								password: rawPassword,
+								fotoPerfil: initialPhoto
+							})
+						});
+
+						const contentType = response.headers.get("content-type") || "";
+						if (!contentType.includes("application/json")) {
+							throw new Error("STATIC_HOST_FALLBACK");
+						}
+
+						const data = await response.json();
+						if (response.status === 409 || data.alreadyExists) {
+							renderMariaDBMessage(
+								false,
+								"[Usuario Ya Registrado] Inicia Sesión",
+								"UNIQUE KEY uq_usuarios_correo ('" + correo + "')",
+								data.message || ("El correo '" + correo + "' ya está registrado. Inicia sesión con tu contraseña.")
+							);
+							switchAuthTab("login");
+							const loginEmailEl = document.getElementById("login-usuario");
+							if (loginEmailEl && !loginEmailEl.readOnly) {
+								loginEmailEl.value = rawCorreo;
+							}
+							return;
+						}
+
+						if (!response.ok || !data.ok) {
+							renderMariaDBMessage(
+								false,
+								"[Error de Registro]",
+								"REGISTER_REJECTED",
+								data.message || "No se pudo completar el registro."
+							);
+							return;
+						}
+						registeredOnServer = true;
+					} catch (err) {
+						// Modo estático sin backend: verificar si ya existe en la bóveda local
+						if (vault[rawCorreo]) {
+							renderMariaDBMessage(
+								false,
+								"[Usuario Ya Registrado] Credenciales Protegidas",
+								"UNIQUE KEY uq_usuarios_correo ('" + correo + "') -> DUPLICATE ENTRY",
+								"El correo '" + correo + "' ya está registrado en la base de datos. Inicia sesión en la pestaña 'Iniciar Sesión'."
+							);
+							switchAuthTab("login");
+							return;
+						}
+					}
+
+					// Guardar de forma persistente en la base de datos local y servidor
+					vault[rawCorreo] = {
+						nombre: nombre,
+						correo: rawCorreo,
+						usuario: usuario,
+						passwordHash: pwdSha256,
+						bcryptSimulated: "$2b$10$" + pwdSha256.slice(0, 53),
+						fotoPerfil: initialPhoto,
+						rol: "cliente",
+						welcomeEmailSent: true,
+						fechaRegistro: new Date().toISOString()
+					};
+					saveUsersVault(vault);
+					pendingRegisterPhotoDataUrl = null;
+
+					// Disparar correo automático de bienvenida EXCLUSIVAMENTE en este registro desde cero
+					showWelcomeEmailBannerOnce(rawCorreo, nombre);
+
+					renderMariaDBMessage(
+						true,
+						"[MariaDB 11.4 - Registro Persistente & Correo de Bienvenida]",
+						"INSERT INTO usuarios (nombre, correo, usuario, password_hash, foto_perfil, bienvenida_enviada) VALUES (?, '" + correo + "', ?, '$2b$10$...', ?, 1)",
+						"Usuario '" + correo + "' guardado permanentemente" + (registeredOnServer ? " en la base de datos" : "") + ". Se envió el correo automático de bienvenida por única vez."
+					);
+
+					await setActiveSession(
+						{
+							nombre: nombre,
+							correo: rawCorreo,
+							usuario: usuario,
+							role: "cliente",
+							fotoPerfil: initialPhoto,
+							isGuest: false,
+							welcomeEmailSent: true
+						},
+						true
+					);
+				});
+			}
+
+			if (guestAccessBtn) {
+				guestAccessBtn.addEventListener("click", async function () {
+					if (currentAuthenticatedSession && !currentAuthenticatedSession.isGuest) {
+						renderMariaDBMessage(
+							false,
+							"[Sesión Activa Bloqueada] Cierra Sesión Primero",
+							"LOCKED SESSION: " + currentAuthenticatedSession.correo,
+							"Cierra tu sesión activa explícitamente antes de cambiar a Modo Invitado."
+						);
+						return;
+					}
+					hideWelcomeEmailBanner();
+					renderMariaDBMessage(
+						true,
+						"[MariaDB 11.4 - Sesión Temporal] Modo Invitado Activo",
+						"SET SESSION seijakutech_role = 'invitado'; -> Query OK (0.001 sec)",
+						"Acceso habilitado en Modo Invitado con protección Anti-SQLi activa."
+					);
+					await setActiveSession({ displayName: "Modo Invitado", role: "invitado", isGuest: true }, true);
+				});
+			}
+
+			// ============ SISTEMA DE CARRITO DE COMPRAS INTERACTIVO ============
+			const CART_STORAGE_KEY = "seijakutech_cart";
+			const ORDERS_STORAGE_KEY = "seijakutech_orders";
+			let cartItems = [];
+
+			try {
+				const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+				if (savedCart) {
+					cartItems = JSON.parse(savedCart) || [];
+				}
+			} catch (e) {
+				cartItems = [];
+			}
+
+			const openCartBtn = document.getElementById("open-cart-btn");
+			const closeCartBtn = document.getElementById("close-cart-btn");
+			const cartDrawer = document.getElementById("cart-drawer");
+			const cartOverlay = document.getElementById("cart-drawer-overlay");
+			const cartCountBadge = document.getElementById("cart-count");
+			const cartItemsList = document.getElementById("cart-items-list");
+			const cartTotalPrice = document.getElementById("cart-total-price");
+			const clearCartBtn = document.getElementById("clear-cart-btn");
+			const checkoutCartBtn = document.getElementById("checkout-cart-btn");
+			const checkoutFeedback = document.getElementById("cart-checkout-feedback");
+			const addCartButtons = document.querySelectorAll("[data-add-cart]");
+
+			function formatCLP(amount) {
+				return "$" + Number(amount || 0).toLocaleString("es-CL");
+			}
+
+			function saveCartState() {
+				try {
+					localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cartItems));
+				} catch (e) {
+					// Ignorar errores de cuota en modo privado
+				}
+			}
+
+			function openCartDrawer() {
+				if (!cartDrawer || !cartOverlay) return;
+				cartOverlay.classList.remove("hidden");
+				cartDrawer.classList.remove("hidden");
+				cartDrawer.classList.add("flex");
+			}
+
+			function closeCartDrawer() {
+				if (!cartDrawer || !cartOverlay) return;
+				cartOverlay.classList.add("hidden");
+				cartDrawer.classList.add("hidden");
+				cartDrawer.classList.remove("flex");
+			}
+
+			function renderCart() {
+				if (cartCountBadge) {
+					cartCountBadge.textContent = String(cartItems.length);
+				}
+
+				const total = cartItems.reduce(function (sum, item) {
+					return sum + Number(item.price || 0);
+				}, 0);
+
+				if (cartTotalPrice) {
+					cartTotalPrice.textContent = formatCLP(total);
+				}
+
+				if (!cartItemsList) return;
+
+				if (cartItems.length === 0) {
+					cartItemsList.innerHTML =
+						'<p class="text-sm text-slate-400 text-center py-10">Tu carrito está vacío. Agrega servicios desde la sección Cotización.</p>';
+					return;
+				}
+
+				cartItemsList.innerHTML = cartItems
+					.map(function (item, index) {
+						return (
+							'<article class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-3 p-3 rounded-xl bg-slate-900/90 border border-cyan-400/40 shadow-[0_0_12px_rgba(0,240,255,0.12)] w-full max-w-full">' +
+							'<div class="flex flex-col min-w-0 w-full sm:w-auto">' +
+							'<span class="text-xs sm:text-sm font-bold text-slate-100 break-words">' + item.service + "</span>" +
+							'<span class="text-xs sm:text-sm font-black text-[#00f0ff]">' + formatCLP(item.price) + "</span>" +
+							"</div>" +
+							'<button type="button" data-remove-index="' + index + '" aria-label="Eliminar ' + item.service + '" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg border border-red-400/50 bg-red-950/50 text-red-300 text-xs font-bold uppercase transition-all hover:bg-red-500 hover:text-white cursor-pointer shrink-0">' +
+							"Eliminar" +
+							"</button>" +
+							"</article>"
+						);
+					})
+					.join("");
+
+				cartItemsList.querySelectorAll("[data-remove-index]").forEach(function (removeBtn) {
+					removeBtn.addEventListener("click", function () {
+						const idx = Number(this.getAttribute("data-remove-index"));
+						if (!Number.isNaN(idx)) {
+							cartItems.splice(idx, 1);
+							saveCartState();
+							renderCart();
+						}
+					});
+				});
+			}
+
+			addCartButtons.forEach(function (btn) {
+				btn.addEventListener("click", function () {
+					const serviceName = this.getAttribute("data-service") || "Servicio Técnico";
+					const servicePrice = Number(this.getAttribute("data-price") || 0);
+
+					cartItems.push({
+						id: Date.now() + "-" + Math.random().toString(36).slice(2, 7),
+						service: serviceName,
+						price: servicePrice
+					});
+
+					if (checkoutFeedback) {
+						checkoutFeedback.classList.add("hidden");
+					}
+
+					saveCartState();
+					renderCart();
+					openCartDrawer();
+				});
+			});
+
+			if (openCartBtn) {
+				openCartBtn.addEventListener("click", function (event) {
+					event.preventDefault();
+					openCartDrawer();
+				});
+			}
+
+			if (closeCartBtn) {
+				closeCartBtn.addEventListener("click", closeCartDrawer);
+			}
+
+			if (cartOverlay) {
+				cartOverlay.addEventListener("click", closeCartDrawer);
+			}
+
+			if (clearCartBtn) {
+				clearCartBtn.addEventListener("click", function () {
+					cartItems = [];
+					if (checkoutFeedback) {
+						checkoutFeedback.classList.add("hidden");
+					}
+					saveCartState();
+					renderCart();
+				});
+			}
+
+			if (checkoutCartBtn) {
+				checkoutCartBtn.addEventListener("click", async function () {
+					if (!checkoutFeedback) return;
+
+					if (cartItems.length === 0) {
+						checkoutFeedback.classList.remove("hidden");
+						checkoutFeedback.innerHTML =
+							'<div class="font-bold text-red-300 uppercase mb-1">Carrito vacío</div>' +
+							"<div>Agrega al menos un servicio desde la sección Cotización antes de finalizar la compra.</div>";
+						return;
+					}
+
+					const totalCompra = cartItems.reduce(function (sum, item) {
+						return sum + Number(item.price || 0);
+					}, 0);
+					const resumenServicios = cartItems
+						.map(function (item) {
+							return "• " + item.service + " (" + formatCLP(item.price) + ")";
+						})
+						.join("<br>");
+
+					const nuevoPedido = {
+						folio: "ST-" + Date.now().toString().slice(-6),
+						items: cartItems.slice(),
+						total: totalCompra,
+						fecha: new Date().toISOString()
+					};
+
+					// Generar texto con el listado de servicios, precios individuales y monto total en CLP para Gmail
+					const listadoTextoPlano = cartItems
+						.map(function (item, idx) {
+							return (idx + 1) + ". " + item.service + " - " + formatCLP(item.price) + " CLP";
+						})
+						.join("\n");
+
+					const cuerpoMensaje =
+						"Hola equipo de SEIJAKUTECH,\n\n" +
+						"Deseo solicitar y confirmar el siguiente pedido de servicios técnicos (Folio " + nuevoPedido.folio + "):\n\n" +
+						listadoTextoPlano + "\n\n" +
+						"Monto Total: " + formatCLP(totalCompra) + " CLP\n\n" +
+						"Quedo atento(a) a la coordinación del servicio. ¡Muchas gracias!";
+
+					const asuntoCodificado = encodeURIComponent("Solicitud de Pedido " + nuevoPedido.folio + " - SEIJAKUTECH");
+					const cuerpoCodificado = encodeURIComponent(cuerpoMensaje);
+					const gmailComposeUrl =
+						"https://mail.google.com/mail/?view=cm&fs=1&to=seijakutech@gmail.com&su=" +
+						asuntoCodificado +
+						"&body=" +
+						cuerpoCodificado;
+
+					window.open(gmailComposeUrl, "_blank", "noopener,noreferrer");
+
+					// Guardar pedido en localStorage
+					try {
+						const historial = JSON.parse(localStorage.getItem(ORDERS_STORAGE_KEY) || "[]");
+						historial.push(nuevoPedido);
+						localStorage.setItem(ORDERS_STORAGE_KEY, JSON.stringify(historial));
+					} catch (e) {
+						// Ignorar errores de almacenamiento
+					}
+
+					let origenGuardado = "localStorage & Emulación MariaDB (seijakutech_db.pedidos)";
+
+					// Intentar registrar en la tabla `pedidos` de MariaDB si el servidor está activo
+					try {
+						const res = await fetch("/api/pedidos", {
+							method: "POST",
+							headers: { "Content-Type": "application/json" },
+							body: JSON.stringify(nuevoPedido)
+						});
+						const contentType = res.headers.get("content-type") || "";
+						if (res.ok && contentType.includes("application/json")) {
+							const data = await res.json();
+							if (data && data.ok) {
+								origenGuardado = "MariaDB 11.4 (seijakutech_db.pedidos) + localStorage";
+							}
+						}
+					} catch (err) {
+						// Servidor estático: se mantiene el respaldo en localStorage
+					}
+
+					checkoutFeedback.classList.remove("hidden");
+					checkoutFeedback.innerHTML =
+						'<div class="font-bold text-[#00f0ff] uppercase tracking-wider mb-1">✓ Pedido Procesado — Folio ' + nuevoPedido.folio + "</div>" +
+						'<div class="text-slate-300 mb-2">Almacenado en: <span class="text-cyan-300 font-semibold">' + origenGuardado + "</span></div>" +
+						'<div class="border-t border-cyan-400/30 pt-2 mb-2 text-slate-200">' + resumenServicios + "</div>" +
+						'<div class="font-black text-sm text-[#00f0ff] mb-2">Total Pagado: ' + formatCLP(totalCompra) + " CLP</div>" +
+						'<a href="' + gmailComposeUrl + '" target="_blank" rel="noopener noreferrer" class="inline-block text-xs font-bold uppercase tracking-wider text-cyan-300 underline hover:text-white">Abrir resumen en Gmail nuevamente</a>';
+
+					cartItems = [];
+					saveCartState();
+					renderCart();
+				});
+			}
+
+			renderCart();
+		});
+	</script>
+	<script src="./assets/js/cyber-effects.js"></script>
+</body>
+</html>
